@@ -71,7 +71,7 @@ class rptCartaCobranca extends satecmax_pdf
 						AND d.cd_pessoa = e.cd_pessoa
 						AND b.st_baixado = 0
 						AND DATE_ADD(b.dt_vencimento,
-						INTERVAL 1 DAY) < CURDATE()
+						INTERVAL 10 DAY) < CURDATE()
 						AND b.cd_unidade = {$cdUnidade}
 				GROUP BY b.cd_boleto_mes_unidade 
 				UNION 
