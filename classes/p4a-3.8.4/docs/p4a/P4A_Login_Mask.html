@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class P4A_Login_Mask</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> P4A_Login_Mask</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This mask is useful when you've to deal with authentication.</p>
+<p class="description"><p>Note that all actions set here are AJAX actions, this was decided  because we don't want the mask to be redesigned when the user hits  return or the GO button (focus loss is a problem we want to avoid).  Due to this choice you've to remember that when you're opening a new  mask after upon the completition of the login, you'll have to call  the mask's main() method.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Andrea Giardina &lt;<a href="mailto:andrea.giardina@crealabs.it">andrea.giardina@crealabs.it</a>&gt;</li>
+				<li><span class="field">author:</span> Fabrizio Balliano &lt;<a href="mailto:fabrizio@fabrizioballiano.it">fabrizio@fabrizioballiano.it</a>&gt;</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2003-2010 Fabrizio Balliano, Andrea Giardina</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_p4a---objects---masks---login.php.html">/p4a/objects/masks/login.php</a> (line <span class="field">43</span>)
+		</p>
+		
+				
+		<pre><a href="../p4a/P4A_Object.html">P4A_Object</a>
+   |
+   --<a href="../p4a/P4A_Mask.html">P4A_Mask</a>
+      |
+      --P4A_Login_Mask</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$frame" title="details" class="var-name">$frame</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../p4a/P4A_Button.html">P4A_Button</a></span>
+					<a href="#$go" title="details" class="var-name">$go</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../p4a/P4A_Field.html">P4A_Field</a></span>
+					<a href="#$password" title="details" class="var-name">$password</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../p4a/P4A_Field.html">P4A_Field</a></span>
+					<a href="#$username" title="details" class="var-name">$username</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">P4A_Login_Mask</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#login" title="details" class="method-name">login</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$frame" id="$frame"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$frame</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">P4A_Frame</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$go" id="$go"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../p4a/P4A_Button.html">P4A_Button</a></span>
+			<span class="var-name">$go</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">63</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$password" id="$password"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../p4a/P4A_Field.html">P4A_Field</a></span>
+			<span class="var-name">$password</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$username" id="$username"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../p4a/P4A_Field.html">P4A_Field</a></span>
+			<span class="var-name">$username</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">53</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../p4a/P4A_Mask.html">P4A_Mask</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$close_popup_button">P4A_Mask::$close_popup_button</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$data">P4A_Mask::$data</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$external_fields">P4A_Mask::$external_fields</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$fields">P4A_Mask::$fields</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$focus_object_id">P4A_Mask::$focus_object_id</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$is_popup">P4A_Mask::$is_popup</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$map_actions">P4A_Mask::$map_actions</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$template_name">P4A_Mask::$template_name</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$title">P4A_Mask::$title</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$_icon">P4A_Mask::$_icon</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$_icon_size">P4A_Mask::$_icon_size</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$_left_sidebar_width">P4A_Mask::$_left_sidebar_width</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$_redesign_focus">P4A_Mask::$_redesign_focus</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$_right_sidebar_width">P4A_Mask::$_right_sidebar_width</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$_temp_vars">P4A_Mask::$_temp_vars</a></span><br>
+							</span>
+													<img src="../media/images/PrivateVariable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Mask.html#var$_tpl_vars">P4A_Mask::$_tpl_vars</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../p4a/P4A_Object.html">P4A_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_helpers">P4A_Object::$_helpers</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_id">P4A_Object::$_id</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_map_actions">P4A_Object::$_map_actions</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_name">P4A_Object::$_name</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_objects">P4A_Object::$_objects</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_parent_id">P4A_Object::$_parent_id</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">65</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">P4A_Login_Mask</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../p4a/P4A_Mask.html#method__construct">P4A_Mask::__construct()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodlogin" id="login"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">login</span> (line <span class="line-number">96</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			login
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../p4a/P4A_Mask.html">P4A_Mask</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#method__construct">P4A_Mask::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodaddTempVar">P4A_Mask::addTempVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodclearTemplateVars">P4A_Mask::clearTemplateVars()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodclearTempVars">P4A_Mask::clearTempVars()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methoddeleteRow">P4A_Mask::deleteRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methoddisplay">P4A_Mask::display()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methoddropTempVar">P4A_Mask::dropTempVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methoderror">P4A_Mask::error()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodfirstRow">P4A_Mask::firstRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetAsString">P4A_Mask::getAsString()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetFocusedObjectId">P4A_Mask::getFocusedObjectId()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetIcon">P4A_Mask::getIcon()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetIconSize">P4A_Mask::getIconSize()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetLeftSidebarWidth">P4A_Mask::getLeftSidebarWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetPrevMask">P4A_Mask::getPrevMask()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetRightSidebarWidth">P4A_Mask::getRightSidebarWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetSource">P4A_Mask::getSource()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetTemplateName">P4A_Mask::getTemplateName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodgetTitle">P4A_Mask::getTitle()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodinfo">P4A_Mask::info()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodisFocusToRedesign">P4A_Mask::isFocusToRedesign()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodisPopup">P4A_Mask::isPopup()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodlastRow">P4A_Mask::lastRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodloadRow">P4A_Mask::loadRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodmain">P4A_Mask::main()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodmaskClose">P4A_Mask::maskClose()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodmaskOpen">P4A_Mask::maskOpen()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodnewRow">P4A_Mask::newRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodnextRow">P4A_Mask::nextRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodnone">P4A_Mask::none()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodprevRow">P4A_Mask::prevRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodreloadRow">P4A_Mask::reloadRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodrestart">P4A_Mask::restart()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsaveRow">P4A_Mask::saveRow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetFocus">P4A_Mask::setFocus()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetIcon">P4A_Mask::setIcon()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetIconSize">P4A_Mask::setIconSize()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetLeftSidebarWidth">P4A_Mask::setLeftSidebarWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetRequiredField">P4A_Mask::setRequiredField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetRightSidebarWidth">P4A_Mask::setRightSidebarWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetSource">P4A_Mask::setSource()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsetTitle">P4A_Mask::setTitle()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodshowPrevMask">P4A_Mask::showPrevMask()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodsingleton">P4A_Mask::singleton()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodunsetRequiredField">P4A_Mask::unsetRequiredField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methoduseTemplate">P4A_Mask::useTemplate()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodvalidateFields">P4A_Mask::validateFields()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Mask.html#methodwarning">P4A_Mask::warning()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../p4a/P4A_Object.html">P4A_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method__construct">P4A_Object::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodbuild">P4A_Object::build()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoddestroy">P4A_Object::destroy()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoddropImplement">P4A_Object::dropImplement()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoderrorHandler">P4A_Object::errorHandler()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetId">P4A_Object::getId()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetName">P4A_Object::getName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetObjectType">P4A_Object::getObjectType()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetParentID">P4A_Object::getParentID()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodimplement">P4A_Object::implement()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodintercept">P4A_Object::intercept()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodisActionTriggered">P4A_Object::isActionTriggered()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodsetName">P4A_Object::setName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodsetParentID">P4A_Object::setParentID()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodvoid">P4A_Object::void()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method_loadHelper">P4A_Object::_loadHelper()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method__call">P4A_Object::__call()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 10 Aug 2011 22:27:03 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

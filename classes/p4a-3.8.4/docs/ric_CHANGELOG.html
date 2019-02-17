@@ -1,0 +1,1904 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<div align="center"><h1>CHANGELOG</h1></div>
+<pre>
+3.8.4
+- &quot;meta viewport&quot; tag was added to mask's HTML for a better mobile rendering
+- P4A::getMetaViewport() and setMetaViewport() methods were added
+- p4a_center_elements() javascript funcion now removes marginLeft/paddingLeft
+  from the first visible column of the first P4A_Frame widget
+- a bug with P4A_Frame and multiple CSS classes was solved
+- P4A_Table's arrow symbols were because the past ones weren't shown on mobile
+  devices
+- an ob_clean() call was added to P4A_Thumbnail_Generator::outputThumbnail()
+  method
+- Zend Framework was updated to 1.11.10
+- P4A_Table's image cols do not throw exception anymore if the image
+  does not exist
+- P4A_Field_loadSelectByArray helper now supports a second parameter to specify
+  the array's primary key field name
+
+3.8.3
+- P4A_DB_Navigator now supports query defined sources
+- a bug with P4A_Data_Source::saveUploads() was solved
+- a bug with P4A_Table's image cols (without GD installed) was solved
+- P4A_DB_Navigator now triggers a beforeclick event
+- all p4a_load_js calls were migrated to require.js
+- a bug with P4A_DB_Source::deleteRow() called when in newRow state was solved
+- p4a_ajax_enable javascript function was added
+- a bug with P4A_GD constant default definition was solved
+- P4A_Mask::restart() method was added
+- Zend Framework was updated to 1.11.7
+- translations were updated
+- P4A_DB_Source::load() method now checks for duplicate calls and throws an error
+
+3.8.2
+- Zend Framework was updated to 1.11.6
+- CKEditor was updated to 3.6.0
+- jQuery UI was updated to 1.8.11
+- requirejs was added
+- P4A_Dir_Source automatically sorts files
+- P4A_Dir_Source::setPageLimit() calling was disabled
+- P4A_Dir_Source's page limit is now set to 0 (disabled)
+- autocomplete values are now sorted and unique
+- P4A_Field::getSource() method was added
+- p4a_load_js now uses requirejs
+- P4A_Field and P4A_Data_Fields now support the &quot;datetime&quot; type
+- P4A_Field and P4A_Data_Fields now support the &quot;time&quot; type
+- P4A_Object::dropImplement() now turns the action to lowercase
+- deprecated method P4A_Object::dropMethod() was removed
+- a javascript bug with P4A_DB_Navigator's drag&amp;drop functionalities was solved
+- P4A_DB_Navigator now correctly supports source with non-default DSN
+
+3.8.1
+- jQuery was updated to 1.4.4
+- a bug with multiple p4a_load_js calls (with the same url and within the
+  same loading cycle) was solved
+- a bug with MSSQL and query limits was fixed (thanks to Diego Fattori)
+- CKEditor was updated to 3.5
+- P4A_DB_Source::getRowPosition() now returns 1 if the query throws an error
+- P4A_DB_Source::addHaving(), setHaving() and getHaving() methods were added
+- Zend Framework was updated to 1.11.2
+- a bug with P4A::restart() method was fixed (thanks to Daniel Carrero)
+- a bug with P4A_Data_Source::saveUploads() and custom file paths was solved
+- a new technique to unload CKEditor was implemented
+
+3.8.0
+- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- P4A_DB's connection charset is now set to UTF 8
+  This could lead to possible data corruption, if you're upgrading from a
+  previous release and you're using MySQL or PostgreSQL (Oracle and SQLite
+  should not be involved in this change) you've to be sure to convert the DB
+  charset to UTF-8 before editing data in your P4A applications.
+  
+  ALWAYS DO BACKUPS BEFORE ANYTHING ELSE!!!
+  
+  For MySQL we used this procedure to migrate our DBs:
+  mysqldump --default-character-set=latin1 DBNAME &gt; dump.sql
+  open dump.sql and replace this line
+  /*!40101 SET NAMES latin1 */;
+  with
+  /*!40101 SET NAMES utf8 */;
+  mysql NEWDBNAME &lt; dump.sql
+- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- Support For MS SQL was added, check out the README file
+- AJAX STACK REVERTED TO XML (instead of JSON) due to the bugs with jQuery::form
+- README file was updated
+- CKEditor was updated to 3.4.1
+- a new strategy to avoid CKEDITOR loading problems was implemented
+- P4A_Data_Fields::getSchemaTableField now correctly handles calculated fields
+- a bug with P4A_I18N::format and time fields was fixed
+- P4A::__construct() now has a &quot;cache&quot; param, simply pass a Zend_Cache object
+  to override all Zend_Cache configurations inside P4A
+- P4A::getCache() method was added
+- P4A_I18N now uses P4A::getCache() to pass an overridden Zend_Cache object to
+  Zend_Locale_Data
+- a bug with &quot;onreturnpress&quot; and IE was fixed
+- a bug with multicple CKEditor instances (loaded via AJAX call) and IE
+  was solved
+- CKEditor's forcePasteAsPlainText option was enabled again
+- jQuery::form was updated to 2.49
+- jQuery was updated to 1.4.3
+- file upload percentage and speed is shown while uploading
+  (if PECL uploadprogress is available, APC not implemented beacuse it does
+  not work with PHP CGI)
+- a bug with autocomplete and HTML tags (in the value) was fixed
+- a bug with autocomplete loading was fixed (thank to Lorenzo Valori)
+- a bug with CKEDITOR and AJAX was fixed
+
+3.6.2
+- P4A_Field::setSource() now correctly handles null param
+- CKEditor was updated to 3.4
+- P4A_DB_Source::getRowPosition() now correctly handles multivalue fields
+  (bug #3057839)
+- forcing IE to use his latest rendering engine
+- some javascript fixes were applied to make IE ajax system work
+- Zend Framework was updated to 1.10.8
+- P4A_I18N now correcly handles 3 chars languages (like &quot;fil&quot;)
+- translations were updated
+- Filipino translation was added (thanks to Elin Eon)
+
+3.6.1
+- P4A_DB_Source::load() now returns an object also when setQuery() is used
+- P4A_DB_Source::load()'s autosequence creation now checks that the field
+  exists before calling the setSequence()
+- a bug with P4A_Redirect_To_Url and P4A_Redirect_To_File was solved
+  (bug #3039449)
+- better focus management for P4A_Grid
+- a bug with AJAX javascript returning and html entities was solved
+
+3.6.0
+
+- Zend Framework was updated to 1.10.3
+- FCKEditor was dropped and CKEditor 3.3 was added
+- all AJAX stack was rewritten to use JSON instead of XML
+- in full AJAX environment external javascripts are loaded only if
+  they were not loaded before
+- in full AJAX environment widgets can now execute javascript code before
+  or after the HTML substitution
+- focus internal management was rewritten
+- P4A_Mask::setLeftSidebarWidth(), setRightSidebarWidth(),
+  getLeftSidebarWidth() and getRightSidebarWidth() methods were added
+- jQuery::form was updated to 2.43
+- jQuery was updated to 1.4.2
+- jQuery UI was updated to 1.8.1
+- jQuery::autocomplete plugin was replaced by jQuery UI autocomplete
+- mask's right sidebar is now shown correctly
+- P4A_Data_Source::exportToCSV() deprecated method was removed
+- P4A::isPopupOpened() deprecated method was removed
+- P4A_Mask::unsetFocus() deprecated method was removed
+- P4A_Mask::displayText() deprecated method was removed
+- P4A_Table::setHeader() deprecated method was removed
+- P4A_Box::setValue() and getValue() deprecated methods ware removed
+- P4A_DB::getAll(), queryAll(), getRow(), queryRow(), getCol(), queryCol(),
+  getOne() and queryOne() deprecated methods ware removed
+- P4A_Output_File now supports the &quot;new window&quot; param
+- P4A_DB_Source::rowByPk() method now returns the retrieved row
+- pt_BR translation was added to products_catalogue sample application
+  (thanks to Cassiano Faria)
+- es_MX translation was added to products_catalogue sample application
+  (thanks to Edgar Joel)
+- Yahoo CSS reset was updated to 3.1.0
+- P4A_I18N::normalize() $num_of_decimals params now has a default value
+- P4A_Table_Rows' onformat event now passes a 5th parameter to the interceptor
+  method, this param is the complete row
+- P4A_DB_Navigator::setRootLabel() and getRootLabel() methods were added
+- P4A_DB_Navigator::allowMovementToRoot() method now supports a 2nd param
+  (root element label)
+- P4A_DB_Source::getRowPosition() now adds &quot;GROUP BY&quot; clause
+- default CSS font is now &quot;Verdana,Arial,sans-serif&quot; to match
+  jQuery::UI settings
+
+3.4.4
+- Zend Framework was updated to 1.10.1
+- P4A_Data_Source::exportToCSV() method was marked as deprecated
+- P4A_Data_Source::exportAsCSV() now can be called directly from an event handler
+- translations were updated
+
+3.4.3
+- Zend Framework was updated to 1.9.5
+- jQuery::form was updated to 2.36
+- tooltip javascript was enhanced to make it location aware (bug #1908495)
+- setTooltip() methods were moved to P4A_Widget
+- tooltip support was added to P4A_Tab_Pane
+- PEAR::Net_Useragent_Detect was updated to 2.5.1
+- tooltips hiding methods now have a timeout to allow clicking links inside the
+  tooltip itself
+- new_window parameter was added to P4A_Redirect_To_File() and P4A_Redirect_To_Url()
+  global functions
+- P4A_DB_Source::_composePkString() was fixed handling multiple primary keys
+  (bug #2833159)
+- onautocomplete event was added, it can be used to create a custom search for
+  fields instead of using P4A's default one
+- P4A_DB_Source::setTable() now supports a second parameter &quot;alias&quot;
+- P4A_DB_Source::setTableAlias() and getTableAlias() methods were added
+- P4A_DB_Source::addJoin*() methods now support alias on table (see code reference)
+- P4A_Table elements/page user selector was added (disabled by default)
+- P4A_Table::showElementsOnPageBar() and P4A_Table::hideElementsOnPageBar() were added
+
+3.4.2
+- a bug with backslashes stripping was solved (bug #2853694)
+- a typo was fixed in P4A_DB (profiler activation)
+- P4A_Tab_Pane now correctly handles disabled pages
+- a bug with P4A_Table's ordering with P4A_DB_Source having a group clause was solved
+- Zend Framework was updated to 1.9.4
+- P4A_Thumbnail_Generator won't generate a thumb bigger than the original image
+- P4A_Data_Source::exportAsCSV() was reworked allowing field ordering and field descriptions
+
+3.4.1
+- strong/em are now supported by P4A tooltips
+- DSN charset support was added to set DB connection charset
+- Zend Framework was updated to 1.9.2
+- jquery::maskedInput plugin was updated to 1.2.2
+- P4A_Object::__call() method was changed from private to public for PHP 5.3 compliance
+- P4A_Tab_Pane's CSS padding was changed a bit to fix a rendering bug on firefox/chrome
+- P4A_DB_PROFILE constant was added, it will output every query executed on every DB
+
+3.4.0
+- Zend Framework was updated to 1.8.4
+- jQuery was updated to 1.3.2
+- jQuery UI was updated to 1.7.2
+- P4A_Tab_Pane was converted to jQuery UI
+- P4A_Fieldset and P4A_Tab_Pane now have rounder borders
+- a note about handling dates with Oracle was added to the README file
+- outline CSS property was removed
+- If magic_quotes_gpc are enebled P4A strips out all slashes from $_POST,
+  $_GET, $_COOKIE and $_REQUEST
+- P4A_Dir_Navigator widget was added
+- P4A_Widget::composeStringActions() method now uses
+  P4A_Quote_Javascript_String()
+- a bug with P4A_Dir_Source and hidden files was solved
+- P4A_Dir_Source::getNumRows() method was added
+- P4A_I18N::format() support for &quot;filesize&quot; data type was added
+- P4A_Dir_Source now supports file size and last modification time
+- P4A_Dir_Source's cache was removed due to refactoring
+- P4A_Simple_Edit_Mask now supports empty $source constructor param
+  (default is the mask name)
+- P4A_Progress_Bar widget was added
+- P4A footer was moved to allow better centering when sidebars are visible
+- when uploading a file, it will have a temporary file until the corresponding
+  record won't be saved
+- a bug with P4A_Strip_Double_Backslashes global function was fixed
+  (thanks to bobkoure)
+- a bug with Zend_Framework and Oracle was fixed (stripped zend_db_rownum column)
+- P4A_DB_Navigator now can work also without recursor (flat list is shown)
+- P4A_Mask::displayText() method was marked as deprecated, you can now use
+  P4A_Mask::display() that now has no hardcoded object reference
+- P4A_Data_Source::isFirstRow() and isLastRow() methods were added
+- a bug with P4A_Message and IE7 was solved
+- Oracle's LOBs are now supported
+- P4A_Object's ID generation algorithm was changed (thanks to pbond81 and Mario Spada)
+- P4A_Table thumbnail generation speed was improved (bug #2220506) (thanks to pbond81)
+- P4A_Box's ul/ol is now rendered (bug #2634061) (thanks to bes_sf)
+- a note about aliases on P4A_DB_Source's PK was added to the README file
+- P4A_DB_Source now automatically detects Oracle's NUMBER data type
+- P4A_Tab_Pane's height honoring bug was fixed (bug #2815814)
+- P4A_Widget::composeStringActions() now handles parameters with backslashes inside
+- a bug with P4A_I18N::format() of boolean data was fixed
+- a bug with multicheckbox's CSS on some browsers was fixed
+- a bug with P4A_DB_Source::saveRow and multiple primary keys was solved
+
+3.2.2
+- P4A_Table's image cols are now centered horizontally
+- P4A_Button::setTooltip() and getTooltip() methods were added
+- afterupload event typo was fixed
+- P4A_Thumbnail_Generator::renderToFile() method was added
+- P4A_Mask::getSource() method was added
+- Zend Framework was updated to 1.7.7
+- a bug with P4A_Fieldset theme was fixed (thanks to Mario Spada)
+- P4A_DB::singleton() DB type verification is now case insensitive
+  (bug #2643785) (thanks to BES)
+- a few modifications were done on screen.css file for a better theme
+  result (thanks to pbond81)
+- The way we managed P4A_Validate translations was rewritten to fit the
+  new rules by Zend Framework (we need your help translating the new
+  messages now http://tinyurl.com/au5bvb)
+- a bug with P4A_DB_Source::setWhere() method was fixed
+- translations were synchronized
+- auto file inclusion system was updated to avoid reading Mac hidden files
+- a bug with P4A_DB_Source::addGroup() method was solved (internal syntax
+  change due to a Zend Framework change)
+- p4a_load_js() javascript function was updated to avoid errors if no callback
+  function is passed
+
+3.2.1
+- Zend Framework was updated to 1.7.4
+- PEAR::Net_Useragent_Detect was updated to 2.5.0
+- jQuery::form was updated to 2.19
+- P4A_DB_Source::setQuery() now strips out final semicolon from the passed
+  SQL query (if present) (bug #2557215)
+- P4A_DB_Source::setWhere() now calls a firstRow() if the DB_Source isn't
+  in the &quot;new row&quot; state (bug #2316271)
+- P4A_Filename2File() now uses the fileinfo module if no mime type
+  is detected otherways (bug #2121565)
+- a bug with P4A_Field::getAsDate() and Internet Explorer was fixed
+  (thanks to Mario Spada)
+- P4A_Thumbnail_Generator::setWidth() now resets the max_width to avoid
+  conflicts
+- P4A_Thumbnail_Generator::setHeight() now resets the max_height to avoid
+  conflicts
+- P4A_Thumbnail_Generator::setMaxWidth() now resets the width to avoid
+  conflicts
+- P4A_Thumbnail_Generator::setMaxHeight() now resets the height to avoid
+  conflicts
+- P4A_Thumbnail_Generator::processFile() height/width calculation was
+  rewritten in order to fix bug #2270922
+
+3.2.0
+- P4A is now released under LGPL 3
+- P4A_APPLICATION_SOURCE_DOWNLOAD_URL constant was removed (along with the
+  &quot;download source&quot; link in the footer)
+- P4A_Grid widget was added
+- P4A_Simple_Edit_Mask was added to quickly create a simple mask to edit
+  a database table
+- P4A_Mask_constructSimpleEdit() helper was added to manage the initialization
+  of the P4A_Simple_Edit_Mask and to allow you to use that shortcut also
+  when not inheriting from P4A_Simple_Edit_Mask
+- P4A_Table::showRowIndicator() and hideRowIndicator() methods were added
+- P4A_DB_Source::delete() method now supports schemas
+- P4A_Sheet's error messages were beautified
+- P4A_Thumbnail_Generator now supports transparent GIF/PNG
+- P4A_Thumbnail_Generator now outputs a PNG cache file if a PNG
+  original file was provided
+- P4A_Thumbnail_Generator now outputs a GIF cache file if a GIF
+  original file was provided
+- P4A_Thumbnail_Generator now resamples JPG/PNG instead of just
+  resizing them
+- a rendering bug with P4A_Field (when set as label) was fixed
+- translations were updated
+- white-space: nowrap was added to P4A_Field's CSS for a better
+  webkit/safari/chrome rendering
+- P4A_Frame::getChildrenAsString() protected method was added
+  to avoid code replication between P4A_Frame and all classes
+  inheriting from it
+- P4A_Frame::anchorCenter() method' second parameter was removed
+  because it was unused and unuseful
+- P4A_Frame::anchorCenter() was reworked with some javascript
+  code and now correctly supports P4A_Field many other widgets
+- some XHTML validation errors were fixed
+- default mask/popup templates were changed a bit, fixing a typo
+  on #p4a_sidebar_right div and adding #p4a_main div wrapping
+  the main zone
+- FCKEditor was disabled on Opera because of a bug (user would
+  get 2 editors instead of one)
+- P4A_Base_Mask::frame does not have a default width anymore
+- IE6 PNG Fix is not bound to window's onload event but in our
+  DOMready function
+- a bug with IE6 and popup template's title was solved
+- a bug with WebKit/Safari/Chrome about javascript evaluation
+  after an AJAX call was solved
+- P4A_Frame and P4A_Fieldset can now be anchored with &quot;center&quot;
+  alignment
+- P4A_Frame and P4A_Fieldset do no need a default with anymore,
+  width is calculated automatically using some javascript code
+- when displaying a P4A_Frame o P4A_Fieldset in the &quot;main&quot; region
+  of the mask's template you'll get it automatically centered
+  also if you did not set its width
+- P4A_Error_Mask and P4A_Login_Mask do not have default widths anymore
+- Zend Framework was updated to 1.6.2
+- P4A_I18N::normalize() now has a new parameter &quot;num_of_decimals&quot;
+- P4A_Field::normalize() support for num_of_decimals was added
+- a bug with P4A_DB_Source ordering on calculated fields with
+  alias was solved
+- a bug with jQuery::UI::datepicker not throwing the onchange event
+  was fixed
+- a popup mask can now open another popup mask without closing itself
+- P4A_Preview_Mask now generates width/height for images
+- P4A_I18N::format() method can now handle datetime
+- cache support was added to P4A_Thumbnail_Generator::outputThumbnail() method
+- a bug with image thumbnails cache was solved (thanks to pbond81)
+- schema support for multivalue fields was added
+- schema support for P4A_DB::nextSequenceId() was added
+- sequences are now created in the same schema where the table is stored
+- P4A_Thumbnail_Generator getThumbnailWidth(), getThumbnailHeight(),
+  getOriginalWidth() and getOriginalHeight() methods were added
+- P4A_Thumbnail_Generator::setFileName() method now resets previously detected
+  (or computed) widths and heights (thanks to pbond81)
+- a bug with setFocus and AJAX calls was fixed
+- a bug with P4A_DB_Navigator::setStyleProperty was fixed (Thanks to Mario Spada)
+- P4A_Navigator's default CSS now allowss scrolling (Thanks to Mario Spada)
+- case insensitive check was added when downloading an attachment
+  with P4A installed on a windows server
+- P4A::getCssConstants() method was added, it's needed when you need some params
+  to pass to a dyndamic PHP/CSS you're creating
+- Every kind of cache was hopefully completely disabled
+- jquery::maskedInput plugin was updated to 1.2
+- FCKEditor now has ForcePasteAsPlainText as default configuration
+
+3.0.3
+- P4A_Thumbnail_Generator now supports ie's pjpeg extension
+- a bug with P4A_I18N::_format() method was solved
+  (YYYY was changed to yyyy)
+- P4A_Field::setYearRange() method was added to be able to
+  manage the year range in the datepicker
+- 10px top padding was added to P4A_Fieldset
+- jQuery::maskedinput 1.1.4 plugin was added
+- P4A_Field::setInputMask() and getInputMask() methods were added,
+  check the code reference for usage
+- popup template support for &quot;top&quot; zone was added
+- P4A_Table's caption (label) is now automatically traslated at run time
+- P4A now triggers the &quot;ontranslate&quot; event, you can intercept it
+  (getting string/translation/istranslated parameters) to track
+  translations while developing your application
+- a bug with P4A_Table's label with IE6 was fixed
+- P4A_Table's navigation bar's &quot;go to page&quot; label's CSS was changed
+  so now it will remain on a single line
+- a typo in P4A_DB_Source documentation was fixed
+- a PHP warning was fixed in P4A_DB_Navigator
+- more info were added in products_catalogue's index.php file
+- P4A_Mask::setRequiredField() and unsetRequiredField() methods
+  now check if the field exists before calling the addValidator()
+  otherwise show an error message
+
+3.0.2
+- a small change was done on P4A_Array_Source to enable the usage of empty
+  array_sources without warnings
+- tooltips are now automatically translated at rendering time
+- P4A_DB_Source::saveRow() now reads pk values back from
+  Zend_DB_Table::insert() gaining better functionality with
+  auto increment primary keys
+- jQuery UI was updated to 1.5.2
+- a small bug with P4A_I18N::_normalize() method was solved
+- p4a_focus_set() javascript function was reworked to avoid a
+  javascript warning in firebug
+- loading a P4A_Array_Source with a simple array of data now
+  does not create the &quot;0&quot; field anymore, it's been renamed to &quot;f0&quot;
+  to avoid problems with some PHP configurations with numerical
+  object properties
+- P4A_DATEPICKER_START_YEAR and P4A_DATEPICKER_END_YEAR constants
+  were added to automatically configure all datepickers in your
+  application with a single constant definition
+
+3.0.1
+- a bug about session name was solved
+- FCKEditor was updated to 2.6.2
+- a bug with shadows CSS was solved (unused shadow.png file is not linked
+  by screen.css anymore so we've no &quot;file not found&quot; in web server's logs)
+- P4A_Error_Handler() global function now uses the P4A::messageWarning()
+  wrapper for P4A::message() solving a bug with the warning icon name
+  that was changed in 3.0.0-rc5
+- jQuery UI was updated to 1.5.1
+
+3.0.0
+- P4A_DB_Source::addJoin*() methods now support the schema name as the last
+  param
+- FCKEditor was updated to 2.6.1
+- P4A_EXCEPTION_HANDLER and P4A_ERROR_HANDLER constants were added so now
+  you can set your own error/exception handlers
+- a few comments where added to P4A_DB_Source
+- a small change was done in P4A_Redirect_To_File() global function
+  (index.php link was forced)
+- a small bug with file download button (within file P4A_Field) on
+  windows server was solved (generated file name is now correct)
+- README file was updated with IIS compatibility
+- P4A_DB_Navigator::allowMovement(false) is now supported
+- P4A_Message default icon was ported to the new icons structure
+- a bug on P4A_DB_Navigator drag&amp;drop javascript was solved
+- a bug (download file name) with P4A_Output_File() global 
+  function was solved
+- a bug with P4A_Output_File() global function automatic file delete
+  on Windows servers was solved
+- translations were synchronized
+
+3.0.0-rc5
+- P4A_Table's CSS was beautified a bit
+- _disabled icons were removed, opacity: 0.2 filter is added to buttons
+  to simulate the disabled effect
+- P4A_Message's CSS was changed due to the variation of its usage, 
+  now it's not black/bold anymore
+- P4A_Table's order/row indicators were replaced with HTML entities
+  removing the need for icons
+- default fonts in CSS were changed because of the lack of some UTF-8
+  characters in IE6
+- P4A_Menu' submenu indicator icon was replaced with an HTML entity
+  which is applied by a javascript function because the indicator
+  has no reason to be in the HTML
+- spacer.png image was removed 'cause unused
+- loading.gif was moved from icons directory to theme directory
+- some new constants were added to customize theme colors
+- a bug with PNG uploads under IE was fixed
+- separator.png icon was removed
+- P4A_Toolbar' separators are now rendered as empty divs instead of
+  an image
+- P4A_Toolbar' were switched from P4A_Image to P4A_Box
+- P4A_Toolbar::setSize() method now checks if buttons have the setSize
+  method to propagate it, otherwise tries the setHeight method, otherwise
+  throws a warning
+- P4A_Message default size was changed to 32
+- 48 pixels icons were removed
+- a gradient was added to some elements in the default theme
+- P4A::messageInfo(), messageWarning() and messageError() methods
+  were added wrapping P4A::message() method
+- P4A icons now implements the freedesktop icon naming specifications:
+  http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+- P4A_Mask's default icon size was changed from 48 to 32
+- P4A_Table_Navigation_Bar's current page indicator was switched from a
+  P4A_Label to a P4A_Box because the P4A_Label has to be bundled with a
+  P4A_Field
+- a nice shadow effect was added to system messages and tooltips if
+  not on handheld or internet explorer browsers
+- jQuery::UI was updated to 1.5
+- P4A_DB_Navigator's HTML was reworked to work on ie6 without GIF images
+  and removign inline CSSes
+
+3.0.0-rc4
+- a default submit button was added to P4A default HTML form
+  (hidden and without events) to solve the
+  enter key bug (propagating event to the first button)
+- mouseover on system messages pause the fadeOut timer giving
+  more time to read the messages
+- P4A_Table_Col::setHeader() method was marked deprecated
+- P4A_Table_Rows and P4A_Table_Col now trigger the onclick event 
+  (in addition to beforeclick and afterclick) useful if you don't
+  want the table to move your linked P4A_Data_Source
+- P4A_Table::showTitleBar() method was removed because obsolete
+- P4A_Table_Rows::disable() won't disable table's &quot;action cols&quot;
+- A P4A_Table's caption small rendering bug with safari was solved
+- P4A_Table's CSS was modified for a better readability
+- jQuery was updated to 1.2.6
+- P4A_Redirect_To_Url() global method was added, useful if you want to
+  redirect the user outside P4A
+
+3.0.0-rc3
+- file upload check and error reporting was enhanced
+- a bug with file download within a non-ajax environment was solved
+- Zend Framework was updated to 1.5.2
+- P4A_Redirect_To_File() global function now checks if the file really
+  exists within P4A_UPLOADS_DIR, otherwise throws a P4A_Exception
+- P4A_Tab_Pane's pages' labels are now auto translated on getAsString()
+- P4A_Field::getAsDate() does not set the field &quot;readonly&quot; anymore thus
+  now dates can you written by hand too
+- jQuery was updated to 1.2.5
+- jQuery::UI::datepicker javascript file was replaced with the packed one
+  which is only 20kb instead of 60kb
+- folder_home icon was changed with a new one that degrades to GIF in a
+  better way
+- jQuery::UI::core, draggable and droppable 1.5b4 were added
+- P4A_DB_Navigator's drag&amp;drop movements were implemented
+- P4A_DB_Table::_setupPrimaryKey() method was added, it just calls
+  the parent::_setupPrimaryKey() avoiding exceptions (used when the
+  table has no primary keys)
+- P4A_DB_Source now supports database views within the setTable() method
+- P4A_DB_Source::load() now does not set pk if P4A_DB_Table does not
+  return one or more pk(s)
+- jQuery::dimensions plugin was removed because it has been bundled to
+  the jQuery core
+- P4A_Mask's default template now includes CSS first and then JS, solving
+  some jQuery related issues (on safari/opera)
+- fix_date option was added to P4A_I18N::_normalize() method
+- jQuery::form plugin was updated to 2.10
+
+3.0.0-rc2
+- a bug with P4A_Field::getAsCheckbox() method was solved
+- when a P4A_Field's value is coming from a POST,
+  P4A::main() now checks if the field is enabled
+- translations were synched
+
+3.0.0-rc1
+- saveUploads() method was moved from P4A_Mask to P4A_Data_Source
+- P4A_DB::quote() method's 2nd param &quot;autoquote&quot; is now false by default,
+  solving some problems with P4A_Data_Field::getSQLValue() and getSQLNewValue()
+- when P4A_DB_Source needs a quoted value now it uses P4A_DB-&gt;quote() with
+  autoquote turned on
+- P4A_DB::quote() method, if autoquote param is on, always encloses the value
+  within single quotes
+- jQuery::form was updated to 2.0.8
+- jQuery::iFixPNG was updated to 2.1
+- P4A_Menu's CSS were changed a bit solving a bug with IE6 (too fast hide)
+- P4A_DB_Navigator movements were disabled (due to the unavailable jQuery UI release)
+  thus now all allowMovements methods trigger errors
+
+2.99.9
+- a bug with P4A_Field::getAsRadio() was solved (labels can be clicked now)
+- P4A_Rmdir_Recursive() global function was added
+- P4A_Data_Field::setSequence() method does not add the &quot;_seq&quot; postfix anymore
+- P4A_DB::nextSequenceId() method adds the &quot;_seq&quot; postfix depending on the db you're using
+- SQL dump for PostgreSQL was added to products_catalogue sample
+- products_catalogue' SQL dump for MySQL was renamed to db_dump_mysql.sql
+- P4A_Quote_SQL_Value() global function was removed
+- P4A_DB::quote() method was added (it's a wrapper for Zend_DB quote method)
+- P4A_DB::get*(), fetch*(), query*() methods now support the binding params array
+- P4A_ROOT_PATH autodetection rules were changed a bit for Windows server compatibility
+- P4A_Strip_Double_Backslashes() global function was added
+- P4A_UPLOADS_DIR autodetection rules were changed a bit for Windows server compatibility
+- P4A_Fieldset's label's CSS was changed for Safari 3.1 compatibility
+- P4A_Label's CSS was changes a bit for cross-browser compatibility
+- P4A_Field::getasText()'s CSS now has a default width (150px)
+- a bug with P4A_I18N::mergeTranslation() method was solved
+- FCKEditor was updated to 2.6
+- jQuery::UI::datepicker was updated to 3.4.3
+- javascript/css lazy loading was implemented, all widget depending js/css area loaded
+  only when loosing a lot of KB on first run
+- print CSS was removed
+- translations were synched
+- &quot;Loading...&quot; message can now be translated
+
+2.99.8
+- some minor changes were done after strict validation checks
+- products_catalogue sample now has a &quot;date&quot; field to play with
+- a bug with empty values in P4A_Tables (passed to formatters) was solved
+- P4A_I18N::format() and normalize() methods now returns an empty string if
+  no value is passed
+- P4A_Validate_NotEmpty::isValid() method now correctly handles the &quot;0&quot; string
+  (which is a Zend Framework bug but we create a workaround for it)
+- P4A_I18N::translate() methods returns an empty string if nothing is passed
+- minor documentation updates were done on P4A_DB_Source
+- Zend Framework was updated to 1.5.1
+- P4A_Field::getAsMulticheckbox() and getAsRadio() methods now use 
+  P4A_Generate_Widget_Layout_Table() global function to render labels and inputs
+- P4A_Field::getAsDate()'s input is now &quot;readonly&quot;
+- a bug with P4A_I18N::format() method managing dates was solved
+  (forcing format to YYYY-MM-dd)
+
+2.99.7
+- a bug with disabled P4A_Field::getAsCheckbox() was solved
+- P4A_Field::getAsRadio()'s CSS was modified a bit
+- P4A_Fieldset's legend is now auto translated on getAsString()
+- P4A_Menu's items are now auto translated on getAsString()
+- P4A_Mask's title is now auto translated on getAsString()
+- P4A_Table's headers names are now auto translated on getAsString()
+- P4A_Mask's title is now automatically generated using ucfirst() function instead of ucwords()
+- P4A_I18N::mergeTranslation() method was added
+- products catalogue sample application was changed for simplicity (SQL structure also)
+- products catalogue sample application multilanguage support was added
+- P4A:I18N::format() and normalize() methods now have a new parameter that allows coder to control
+  if the method should throw an exception or now (default is true)
+- P4A_Fields now turns off the exception throwing parameter when calling P4A:I18N::format() or
+  P4A:I18N::normalize(), to avoid application break due to a wrong input
+
+2.99.6
+- a bug with P4A_Navigation_Bar was solved
+- P4A_Fieldset's CSS was changed a bit so it should have the exact width set by setWidth
+- &quot;disabled&quot; property was removed from P4A_Button's HTML 'cause it caused a rendering bug with floats
+- some minor CSS modifications were done
+- a bug on Internet Explorer 6 and sidebars was solved
+- jQuery::iFixPNG was updated to 2.0
+- &quot;folder&quot; and &quot;folder_open&quot; icons were also added in the GIF format (due the ie bug and our usage in list-style-image)
+- P4A_DB_Navigator's CSS was reworked for browser compatibility
+- a bug with PostgreSQL and automatic sequence name creation was fixed
+- P4A_Thumbnail_Generator::isMimeTypeSupported() method was added
+- P4A_Field::getAsFile() method now calls P4A_Thumbnail_Generator::isMimeTypeSupported() before rendering the image preview
+- P4A_Field::getAsFile() method now always render the &quot;preview&quot; button, but it will be disabled if no preview is available
+- P4A_DB, P4A_Tab_Pane, P4A_Table, P4A_Data_Source and P4A_Widget 
+  were ported to the trigger_error() function for programming errors
+- P4A_Error() global function was removed because unused
+- P4A now throws an exception when uploading forbidden files
+- P4A_EXTENDED_ERRORS was implemented for PHP errors
+- P4A_EXTENDED_ERRORS was implemented for exceptions
+- Zend Framework was updated to 1.5
+- P4A_I18N::setFirstDayOfTheWeek() method was ported to ZF 1.5's Zend_Locale_Data::getList()
+
+2.99.5
+- a bug with invisible P4A_Table was solved
+- P4A_Quote_Javascript_String() global function was added
+- P4A_Widget::requireConfirmation() method now uses P4A_Quote_Javascript_String()
+- screen.css was renamed screen.css.php
+- some of the images used for P4A_Table and P4A_Field were moved in a better directory organization
+- P4A_Menu has a submenu indicator (a small arrow that make users aware that a submenu is present)
+- jQuery::UI::datepicker was updated to 3.4
+- a bug with FCKEditor's filemanager was solved
+- P4A_Button now render the &quot;disabled='disabled'&quot; property if disabled
+- P4A_Button now addes 'p4a_button_disabled' or 'p4a_button_image_disabled' class if disabled
+- a bug with P4A_Field autocomplete was solved 
+- P4A_DB_Source was completely ported to the new error handlers
+- multicheckbox CSS was fixed
+- P4A_Field::getAsMultiselect() method now added a &quot;size&quot; property if none was specified
+- index.php file was reworked and the new logo was added
+- index.php file was renamed index.html
+
+2.99.4
+- a bug with quoted strings in P4A_Field::getAsSelect was solved
+- a bug with P4A::getFocusedObjectId() method was solved
+- P4A_Object::__call() method now uses trigger_error() instead of p4a_error() when a method is not found
+- P4A_Object::_loadHelper() method now direcly call P4A_Error_Handler() instead of trigger_error,
+  so we can pass the error file/line and have a readable resulting error message
+- a few modifications were done on P4A_DB_Source so now you can add joins without selecting
+  any column from the joined table
+- P4A_DB::getDBType() method was added
+- P4A_DB_Source::getRowPosition() mystical bug with MySQL (same query called 2 times returns 2 different results)
+  was found again and patched again
+- a bug with P4A_ERROR_Handler() was solved
+- P4A_Field was ported to trigger_error() instead of p4a_error
+- P4A::raiseXMLresponse() method is now public
+- P4A_Error_Handler was rewritten to be used in ajax calls too
+- check_configuration library now also checks for PHP version
+- P4A::executeExternalCommands() method was added
+- all tasks dealing with external systems where moved from P4A::main() to P4A::executeExternalCommands()
+- P4A::executeExternalCommands() is executed just after the session_start(), in the P4A::singleton() method
+- P4A_Object::destroy() now checks if every object to destroy is a P4A_Object before calling destroy() recursively on it
+
+2.99.3
+- P4A_Toolbars code was refactored using P4A chainability
+- a bug with P4A_Full_Toolbar and P4A_Simple_Toolbar about delete was solved
+- a bug with P4A_DB_Source::deleteRow was solved
+- P4A_Widget::requireConfirmation() now trigger an error if addAction wasn't called before
+- P4A_Exception class was added
+- P4A_Exception_Handler now replaces PHP's default exception handler
+- a part of P4A_DB_Source error management was ported to the new error handlers
+- Zend Framework was updated to 1.0.4
+- P4A_DB_Source::load() now returns $this thus is chainable now
+- P4A_DB_Source::_composeSelectCountQuery() now always encapsulate the complete select query (without order clause) in a second count query
+- translations were synched with launchpad
+- P4A_DB::query() method was added
+- P4A_Mask error management was ported to exceptions
+- p4a/libraries/standard.php was renamed p4a/functions.php
+- P4A_DB_Select class was removed 'cause unused
+- code reference was organized in packages
+- P4A_Sheet was ported to the new error handling
+- P4A_Mask::setFocus() method now checks if the passed object is an instance of P4A_Object, otherwise does nothing
+- P4A::getFocusedObjectId() method now checks if the &quot;active_mask&quot; object exists, otherwise returns null
+- P4A_Sheet::anchor() method now supports text strings and not only widgets
+- P4A_Sheet::setFree() method was added
+
+2.99.2
+- P4A_Mask::main() method is now called also within an AJAX call, if a full redesign is required
+- a bug with search function within products_catalogue sample was fixed
+- more chainability was added to the P4A main class
+- a bug with P4A_DB_Source::createDataField() method was solved
+- P4A_DB_Source::addJoin*() methods now supports null 3rd parameter (fields list)
+- a bug with P4A_DB_Source::setFields() and aliases was solved
+- README updated because P4A can't handle db tables with numeric column names
+- P4A_Validate class was added, it subclasses Zend_Validate and we need it to remove validators from a validator chain (ZF does not support that feature)
+- P4A_Field::removeValidator() method was added
+- P4A_Mask::unsetRequiredField() method was added
+- P4A_Widget::removeCSSClass() method was added
+
+2.99.1
+- a bug with &quot;preview&quot; button within P4A_Field file upload was solved
+- a bug with file download was fixed
+- P4A::inAjaxCall() method was rewritten
+- P4A_Redirect_To_File() global function was added
+- a bug with images preview on ie/opera was solved
+- README was updated
+- P4A_Output_File() global function was added, it has to be used when you want to creare a file at run-time and make users download it
+- Chainability support was added for P4A_Simple_Toolbar, P4A_Navigation_Toolbar, P4A_Full_Toolbar and P4A_Actions_Toolbar
+- P4A_Tab_Pane padding was changed a bit
+- P4A_Sheet was re-created
+
+2.99.0
+- Zend Framework 1.0.3 was added
+- Database connection now relies on Zend_DB PDO adapters
+- check_configuration.php was ported to Zend_DB to check the database connection
+- P4A_DB_Source was ported to Zend_DB (only PDO drivers are used)
+- P4A_DB_Source::setFields() syntax was changed, now you must provide only fields from the main table and not from joines ones
+- P4A_DB_Source::addJoin() syntax was changed, join type param was dropped and now you have a third param to pass the columns you want to extract from the joined table (default extracts all columns)
+- P4A_DB_Source now has many methods to add joins: addJoinCross(), addJoinFull(), addJoinInner(), addJoinLeft(), addJoinNatural(), addJoinRight()
+- P4A_I18N does not manage charset anymore, only UTF-8 will be supported from now on
+- P4A_I18N numbers format/normalization now relies on Zend_Locale
+- P4A_I18N dates format/normalization now relies on Zend_Date and Zend_Locale
+- P4A_I18N time format/normalization now relies on Zend_Date and Zend_Locale
+- P4A_I18N::getCountry() was renamed to getRegion()
+- P4A_I18N::autoFormat() was renamed to format()
+- P4A_I18N::autoUnFormat() was renamed to normalize()
+- P4A_Number format/normalization class was removed
+- P4A_Date format/normalization class was removed
+- all P4A i18n format definition files were removed
+- translation messages files were reorganized and renamed
+- days and months translations were removed from translation messages files (now they're provided by Zend_Locale)
+- yes/no translations were removed from translation messages files (now they're provided by Zend_Locale)
+- boolean normalization works much better now (eg for italian language: it detects &quot;s&Atilde;&not;&quot; or &quot;si&quot; or &quot;s&quot; without case difference and the same engine works for every language)
+- POT file for the new translation system was prepared and committed to p4a/i18n/templates/p4a.pot
+- P4A_Generate_Default_Label() global function was added, it takes a string such as &quot;this_is_field&quot; and returns &quot;This is a field&quot;, useful to generate labels from field names and other things
+- P4A_Button and P4A_Widget were ported to P4A_Generate_Default_Label() to generate default labels
+- default labels are now generated with ucfirst function instead of ucwords
+- P4A toolbars and P4A_Table were ported to the new translation system
+- translations are now applied at rendering time, not at build time
+- P4A_Highlight_AccessKey() global function was added
+- P4A_Widget::setLabel() does not automatically create accesskey now, it would cause problems with translations
+- P4A_Object::intercept() and P4A_Object::actionHandler() now turn action name to lower before processing
+- P4A_Menu now uses P4A_Highlight_AccessKey()
+- P4A_Widget::setValue() and getValue() methods were removed because they've not all widgets have a value
+- P4A_Button::setValue() and getValue() methods were removed, use setLabel() and getLabel() which are logically correct
+- README file was updated, dropping some old browsers support and removing PHP4
+- P4A_Button are now rendered as HTML buttons
+- P4A_Button::setVisible() method now has a second parameter &quot;visible&quot;, check the reference
+- all constructors were converted to PHP5 naming (public function __construct)
+- P4A_Button::setIcon() now supports a path to an image instead of the icon name
+- &quot;currency&quot; format/normalize was removed, it was never used and should not be handled in an application contest (you won't print &acirc;‚&not; only because your application is running with an european locale)
+- P4A_Href widget was removed
+- P4A_DB::limitQuery(), selectLimit() getError(), getNativeError(), query() and close() methods were removed because they can't work with Zend_DB
+- P4A_DB::rollback() and select() methods were added
+- P4A_DB::fetchOne(), fetchCol(), fetchRow() and fetchAll() methods were added for Zend_Db naming convention compatibility
+- P4A_Fieldset now uses getLabel() instead of getTitle() to render its legend, setTitle() and getTile() are now deprecated
+- P4A_DB::get*() and query*() methods are now deprecated
+- P4A_Image was removed
+- P4A_Icon was renamed to P4A_Image
+- P4A_Button::composeStringProperties() method was removed
+- P4A_Image::setIcon() now supports a path to an image instead of the icon name
+- P4A_Toolbar::enable() and disable() methods params were removed
+- P4A_Toolbar::addLabel() method was renamed to addBox()
+- P4A_Toolbar::setOrientation() method was removed because it was not implemented 
+- jQuery::dimensions plugin was updated to 1.2
+- DHTMLCalendar by dynarch was dropped and replaced by jQuery::UI::datepicker 3.2
+- P4A_Field::getAsDate() now it's fully working with the jQuery::UI::datepicker with an additional ajax call to reformat the date
+- P4A_DB::getLikeOperator() and setLikeOperator() methods were added, like operator (LIKE/ILIKE) is autodetected and it's useful when you're generating a query
+- P4A_Field's autocomplete was ported to P4A_DB::getLikeOperator() thus now it should work better with different databases (eg: postgreSQL)
+- P4A_Widget::raise() method was removed
+- P4A_I18N::getLocaleEngine() method was added to retrieve a copy of the Zend_Locale object
+- standard.php library file was cleaned removing PHP4 functions
+- P4A::getP4AJavascript() method was added, it will return a bunch of javascript code needed for P4A initialization
+- jQuery::UI::datepicker was localized using Zend Framework data, no need to sync with datepicked localization files
+- P4A_DB::setSelect() was removed
+- P4A_DB_Source and P4A_Data_Source were php5ized
+- P4A_DB_Source::__sleep() was turned into __wakeup()
+- P4A_Data_Field::setSchema() and getSchema() methods were added
+- P4A_DB_Source::getFieldName() now returns &quot;schema.table.field&quot; and can accept &quot;schema.table.field&quot; as a param
+- P4A_DB::getLikeOperator() and setLikeOperator() methods were dropped, they were not flexible enough to handle all DB insensitive &quot;like&quot; syntax
+- P4A_DB::getCaseInsensitiveLikeSQL() method was added
+- P4A_Field::setFormat(), unsetFormat(), cleanNewValue() methods were removed
+- P4A_Object::actionHandler() methods now supports unlimited params instead of only one
+- P4A_Field now triggers onFormat and onNormalize events you can intercept to do custom format/normalize (your method must return the formatted/normalized value)
+- P4A_Field::unformat() method was renamed to normalize()
+- P4A_Field::getUnformattedNewValue() was renamed to getNormalizedNewValue()
+- P4A_Data_Field::setNumOfDecimals() and getNumOfDecimals() methods were added
+- P4A_Field::createDataField() methods now automatically calls P4A_Data_Field::setNumOfDecimals() setting the number of decimals detected from the DB structure
+- P4A_I18N::format() method now has a third param &quot;num_of_decimals&quot;, used only if type is float or decimal
+- P4A_Field::format() method now uses the P4A_Data_Field-&gt;getNumOfDecimals() to automatically format numbers the most coherent way
+- P4A::message() method was added, you can use it to print out messages to users without having to instance any P4A_Message
+- P4A::getMessages() method was added to read and clean the messages queue
+- P4A::getMessages() method is now used to print out messages to users in a nice way
+- P4A_Field::setFormatted() and unsetFormatted() methods were removed, now you can use only isFormatted(true/false)
+- P4A_Field::getStringValue() method was removed
+- P4A_Standard_Toolbar strange behaviour that automatically disables some buttons one certain conditions was removed
+- P4A_Standard_Toolbar was renamed to P4A_Full_Toolbar
+- P4A_AUTO_MAXLENGTH constant was removed because its feauture was troubleful
+- P4A_Field::getAutoMaxLength() method was removed
+- include.php file content was moved to p4a.php and include.php file was removed
+- config.php file was renamed to constants.php, config makes users think they can change it but it should never be modified
+- P4A_DB_Source::setQuery() was rewritten and now it's works again
+- jQuery was updated to 1.2.2
+- javascript code for P4A system messages was rewritten from scratch
+- P4A_Message and P4A_Tab_Pane were php5ized
+- P4A_Tab_Pane::setActivePage() method now returns the active page
+- P4A_Tab_Pane::nextPage() method now returns the active page
+- P4A_Message::setIcon() now supports a path to an image instead of the icon name
+- P4A_Message and p4a-&gt;message HTML/CSS was unified
+- jQuery UI datepicker CSS was reworked
+- P4A_Generate_Widget_Layout_Table() global function was added to P4A's standard library, this creates an HTML table (1row, 2cols) useful when you've to output an image on a col and a text on the other col
+- HTML output for P4A_Message, P4A system messages and P4A_Button was rewritten using HTML tables because we need users to have the same browsing experience on all browsers
+- P4A's javascript PNG fix routine was dropped
+- jQuery::iFixPng 1.7 was introduced
+- P4A_THEMES_PATH and P4A_THEMES_DIR constants were dropped
+- P4A_Field::noAllowNull() method was removed
+- P4A_Field::allowNull() method now supports passing the &quot;false&quot; value to disable the feature
+- P4A_Field::unsetUploadSubpath() method was removed, use setUploadSubpath(null) to disable the feature
+- P4A_Field::unsetMaxThumbnailSize() method was removed, use setMaxThumbnailSize(null) to disable the feature
+- P4A_Field::setRichTextareaToolbar(), getRichTextareaToolbar() and getRichTextareaToolbars() were removed because unsupported by fckeditor
+- P4A::init() method was removed
+- helpers, P4A_Box, P4A_Object, P4A_Button, P4A_Collection, P4A_Field, P4A_Array_Source, P4A_DB_Source, P4A_Widget, P4A_Mask, P4A, P4A_Frame, P4A_Fieldset, P4A_Label, P4A_Line, P4A_Link, P4A_Menu, P4A_Menu_Item and P4A_Canvas were php5ized
+- P4A_Widget::composeStringClassStyle() was rewritten and renamed to composeStringClass()
+- P4A_Toolbar default size is now 32
+- P4A_Button now inherits height from toolbar (just done via CSS)
+- P4A_Mask::setIcon() now supports a path to an image instead of the icon name
+- P4A_Fieldset::setTitle() and getTitle() methods were removed cause deprecated, use setLabel() and getLabel() instead
+- P4A::getPopupMask() and getPopupMaskName() methods were added
+- P4A_Mask::getFocusedObjectId() method was added
+- P4A_Link::setLabel() method was removed 'cause inherited from P4A_Widget
+- P4A_Menu_Item::setAccessKey() and getAccessKey() methods were removed 'cause inherited from P4A_Widget
+- P4A_Table::addToolbar() and newToolbar() methods were removed 'cause not implemented
+- P4A_Table::addNavigationBar() method was removed
+- P4A_Menu_Item::setIcon() now supports a path to an image instead of the icon name
+- P4A_Sheet was removed 'cause had too many performance issues and it should be rewritten
+- FCKEditor was updated to 2.5.1
+- &quot;oracle&quot; was renamed to &quot;oci&quot; within P4A_DB to reflect PDO naming
+- P4A_DB_Source::setSchema() and getSchema() methods were added
+- some minor bugfixes to P4A_DB_Source were applied in order to make oracle work
+- P4A_Generate_Default_Label() global function now turns the original label lowercase before applying the default rules, this is due for databases which returns uppercase field names
+- a new version of P4A_Base_Mask was added to the core
+- &quot;products catalogue&quot; sample app was ported to P4A_Base_Mask
+- sample_en, sample_it and sample_i18n applications were removed
+- some minor enhancements were made to products_catalogue sample
+- P4A_Widget::intercept() and implementMethod() methods now automatically call the addAction() method when the event is recognized as a browser event
+- P4A_Data_Field::getSQLValue() and getSQLNewValue() now returns data quoted with &quot;double single quote&quot; instead using addslashes (which is deprecated and not working for oracle)
+- P4A_Object::dropIntercept() method was removed
+- P4A_Object::dropMethod() method was added
+- P4A_Object::destroy() method now does not unset the variable from parent but sets it to null
+- a bug with P4A_Object::destroy() was solved, it happened when destroying an object directly stored in the $p4a object
+- PEAR::Net_Useragent_Detect was updated to 2.4.0
+- P4A_Object, P4A_Widget and P4A_Data_Source are now declared as abstract
+- the &quot;eval&quot; call within P4A_Object::actionHandler() method was changed to a call_user_func_array which seems to be faster
+- all &quot;function &amp;function_name&quot; declarations were changed to &quot;function function_name&quot;, removing the &amp; symbol
+- many '&amp;' symbols were removed cause of the new PHP5 reference management
+- P4A_Table and P4A_DB_Navigator were php5ized
+- P4A_Table_Col::setFormatted() and unsetFormatted() methods were removed, use isFormatted(null/true/false) instead
+- P4A_Table_Col::setFormat() and unsetFormat() methods were removed
+- P4A_Table_Col now has the &quot;onformat&quot; event that can be triggered to do custom format operations (same as P4A_Field)
+- P4A_DB_Source::getFieldName() method was removed
+- P4A_Data_Field::getSchemaTableField() method was added, it will return &quot;schema.table.field&quot;
+- P4A_Data_Field::setReadOnly() method was removed, use isReadOnly(null/true/false)
+- P4A_Quote_SQL_Value() global function was added
+- a bug with P4A_DB was fixed to allow sqlite to work the right way with sequences
+- PEAR repository was removed
+- PEAR::validate module was renamed to pear_validate.php and moved to p4a/libraries/ directory
+- PEAR::Net_Useragent_Detect module was renamed to pear_net_useragent_detect.php and moved to p4a/libraries/ directory
+- P4A_Mkdir_Recursive() global function was added to P4A standard library
+- All System::mkdir calls were changed to use the new P4A_Mkdir_Recursive() function
+- a bunch of unuseful referenced were removed from core helpers
+- GetId3 library was updated to 2.0.0b4 (which is php5 only), helper apps for windows servers were removed, they've to be installed in the system path thus we cannot ship them with p4a package 'cause they would be unuseful
+- P4A_Field::setType('image') now causes a fatal error, image is not a recognized type anymore, always use file, it will render images/video/audio preview if it's possible
+- P4A_DEFAULT_ERROR_REPORTING, P4A_EXTENDED_ERROR_REPORTING, P4A_MINIMAL_ERROR_REPORTING constants were added
+- P4A now sets error_reporting to P4A_MINIMAL_ERROR_REPORTING before using getid3() and then restore the error_reporting to the previous value
+- P4A_Validate and PEAR::Validate classes were removed
+- P4A_Field::addValidator() method was added, you can pass it Zend_Validate_* obejects
+- P4A_Field::isValid() method was added to check if the validators chain is respected or not 
+- P4A_Base_Mask::setRequiredField() method now relies on Zend_Validator_NotEmpty
+- P4A_Base_Mask::checkRequiredFields() method was renamed to validateFields() and now checks all validators chains for all fields and not only required fields
+- all javascripts were refactored
+- javascript/css popup management was reworked
+- P4A_Base_Mask::setRequiredField(), validateFields(), warning(), error() and info() methods were moved to P4A_Mask
+- P4A_Validate_Alnum, P4A_Validate_Alpha, P4A_Validate_Between, P4A_Validate_Ccnum, P4A_Validate_Date, P4A_Validate_Digits, P4A_Validate_EmailAddress, P4A_Validate_Float, P4A_Validate_GreaterThan, P4A_Validate_Hex, 
+  P4A_Validate_Hostname, P4A_Validate_InArray, P4A_Validate_Int, P4A_Validate_Ip, P4A_Validate_LessThan, P4A_Validate_NotEmpty, P4A_Validate_Regex and P4A_Validate_StringLength classes were added.
+  These classes rely on Zend_Validate_* classes but we need them to allow translation of error messages
+- P4A::isPopupOpened() and getFocusedObjectId() methods are now marked as deprecated
+- popup system was completely rewritten
+- when generating image thumbnails now we pass by the application's index file instead of directly linking phpthumb
+- phpThumb was updated to 1.7.8
+- jQuery::form was updated to 2.0.3
+- ajax upload was enabled again
+- a bug with getID3 was solved, now we catch the exception triggered when file is not recognized and simply go on
+- YAHOO YUI CSS reset was added
+- P4A_Mask::validateFields() method is now automatically called by P4A_Mask::saveRow()
+- P4A_Table::setTitle() and getTitle() methods were removed, use setLabel() and getLabel() instead
+- P4A_Field::setError() methods now fires a redesign event for the field
+- jQuery::UI::datepicker was updated to 3.3
+- jQuery::interface was removed
+- jQuery::jqModal was removed
+- a simple javascript trick was implemented to avoid concurrent clicks on the interface
+- jQuery::bgiframe plugin was added and implemented (only for ie6) for tooltips and system messages
+- P4A is now released under AFFERO GPL 3
+- P4A_Label::setType(), getType(), setValue() and getValue() methods were removed 'cause unused
+- P4A_Widget::addCSSClass() and getCSSClasses() methods were added
+- tooltip HTML/javascript was rewritten to be simpler
+- P4A_Box::setHTML() and getHTML() methods were added
+- P4A_Box::setValue() and getValue() methods were marked as deprecated
+- all widgets now use the composeStringClass() method, which now use the getCSSClasses() method
+- CSS hacks for internet explorer were removed cause not needed anymore
+- jQuery was updated to 1.2.3
+- P4A_Table has no more container div thus can be styled much more efficently
+- P4A_Field::setDefaultVisualizationProperties() method was removed
+- P4A_Field::getVisualizedDataType() method was added and called during getAsString(), used to generate the data_type CSS class
+- masks and widgets templates were renamed to &quot;.php&quot;
+- P4A::isAjaxEnabled() method was removed
+- P4A::isGecko(), isOpera, isSafari() and getBrowser() methods were added
+- masks templates now add a class to the body (p4a_browser_ie, p4a_browser_gecko, p4a_browser_opera, p4a_browser_safari, p4a_browser_handheld) depending on brower
+- P4A_Navigation_Bar buttons names were changed to be a bit better
+- handheld CSS/Javascript management was changed, now we outputs all CSS/Javascript plus a basic handheld CSS
+- P4A_Table's action cols CSS now handles images much better
+- thumbnails cache was enabled (stored in P4A_UPLOADS_TMP_DIR with &quot;cache_&quot; prefix)
+- P4A_APPLICATION_SOURCE_DOWNLOAD_URL constant was added, you've to set it for every project, it must point to somewhere users can download the source code of the application
+- default template now has a &quot;download source code&quot; link in the footer
+- if P4A_APPLICATION_SOURCE_DOWNLOAD_URL is not set, the &quot;download source&quot; link on the default template will take user to an error page showing the right to receive the source code
+- P4A_DB_Source::load() method now autodetect schema name
+- P4A_DB::nextSequenceId now automatically creates sequences on oracle too
+- jQuery color picker was removed
+- getId3 was dropped, we went back to getimagesize() PHP function to extract images information but we can't retrieve video files information anymore
+- phpThumb was removed
+- P4A_Thumbnail_Generator was added
+- P4A_DB::nextSequenceId now automatically creates sequences on postgreSQL too
+- P4A_DB_Source compose count query was changed a bit to support PostgreSQL syntax
+- P4A_Field does not preview images if GD are not installed
+- P4A_Login_Mask was added, it should be used if your application needs a login system, it does not display the &quot;download application source&quot; link in the footer zone
+- products_catalogue sample now uses the P4A_Login_Mask to show how to use this new feature
+- P4A_Object::implementMethod() method was renamed to implement()
+- P4A::getBrowserOS() method was added
+- default and popup templates now add to #p4a_body a new CSS class containing the browser platform (windows, linux etc...)
+- P4A_Error was removed because outdated, it will be replaced by exception objects
+- README was updated
+- P4A_Tab_Pane::getActivePageName() method was refactored, if empty returns the first page name
+- P4A_Tab_Pane::getAsString() method now calls getActivePageName() to avoid the possibility to render a tab pane without any active page
+- P4A_Mask_Preview was renamed to P4A_Preview_Mask
+- P4A_Mask_Error was renamed to P4A_Error_Mask
+- P4A_Canvas now is rendered inside a container div to have id/class/properties/actions
+- all P4A objects now support chainability
+- P4A_Image::setSource() and getSource() methods were removed
+- P4A_Mask::addTempCss(), dropTempCss(), clearTempCss(), addJavascript(), dropJavascript(), addTempJavascript(), dropTempJavascript(), clearTempJavascript(), addCSS(), dropCSS() were removed
+- default and popup mask templates were broken in 3 files, now header and footer and manager by P4A and templates have only the body part
+- P4A::getPopupMaskName() and getPopupMask() methods were removed
+- P4A_Mask::getP4AJavascript() method was moved to P4A::getJavascriptInitializations()
+- ajax manager was completely reworked and now, if you have ajax enabled, you won't see no refreshes at all, every action will be managed by ajax call with automatic redesign
+
+2.2.4
+- rules to generate P4A_THEME_DIR and P4A_ICONS_DIR were changed
+- P4A_IN_DOCUMENT_ROOT was removed because it was never used
+
+2.2.3
+- a bug with P4A_Label was fixed (&quot;for&quot; property was erroneous with radio and file P4A_Field)
+- ajax file upload was disabled due to a strange bug we hope to solve with future releases of jQuery and its &quot;form&quot; module
+
+2.2.2
+- Major bugfix on P4A_DB_Source::saveRow(), the patch from Edr (introduced in 2.2.0) was removed and a few checks were added to prevent inconsistency
+- some little bugs on P4A_DB_Source were fixed
+
+2.2.1
+- multicheckbox field and multiselect field now support saving in single table field
+- P4A_Field::setMultivalueSeparator method was added 
+- a bug with images on p4a_table wal solved 
+- rich_textarea &quot;Full&quot; theme was added
+- jQuery::form was updated to 2.01
+- a bug with empty &quot;file&quot; fields submitted with an ajax call was solved
+
+2.2.0
+- a bug P4A_DB_Source::saveRow() when multiple primary keys were used was solved (thanks to Edr)
+
+2.1.9
+- changed browser detection libray inclusion
+- a bug with P4A::close() method was fixed
+
+2.1.8
+- P4A_Field::fileDownloadOnClick() now throw an onFileSystemError if file does not exist (Thanks to Matteo for the bug report)
+- A bug on P4A_Frame and P4A_fieldset managing objects that were destroyed in the software flow was fixed, now those objects are deanchored too
+- P4A_Table_Col now can be disabled so user won't be able to click on the cells of the column (Thanks to Alberto)
+- P4A_Widget::composeStringAction() now supports a second parameter &quot;check_enabled_state&quot;, default to true
+- ADODB was update to 496
+- P4A_TABLE_THUMB_HEIGHT constant was added to configure the height of images within tables
+- P4A_Tab_Pane::addPage() method now returns the added page
+- a bug with unformatted P4A_Fields with type set to &quot;select&quot; or &quot;multiselect&quot; or &quot;radio&quot; was fixed
+- P4A_Standard_Toolbar's buttons are now enabled if the mask's data source is empty
+- P4A_Base_Mask::addMandatoryField() method was renamed to setRequiredField()
+
+2.1.7
+- colorpicker javascript and html was rewritten
+- jQuery was updated to 1.2.1
+- jQuery::dimension was updated to 1.1.2
+- P4A_DB::getNativeError() method was added
+- P4A_DB_Navigator's recursor is now optional, thus you can use it also for flat tables
+
+2.1.6
+- jQuery was updated to 1.1.4
+- double session (used to ovoid multiple scan of objects directories) was removed
+- session start was moved into the p4a::singleton() method
+- P4A_ENABLE_AUTO_INCLUSION constant was added (default true), if false disabled automatic application files inclusion thus you'll have to manually include every php file
+- jqModal was updated to 2007.07.30 +r11
+- when an AJAX request fails now we reload the page instead of printing an error
+- a bug with P4A_Table was fixed (empty descriptions on columns with external sources)
+- Malay translation was added (thanks to Eugene Teo)
+- P4A_Field_loadSelectByArray helper was added
+- jQuery::autocomplete was added
+- P4A_Field::getAsText() now supports autocomplete feature if a P4A_DB_Source is provided with the $fiels-&gt;setSource($db_source) method
+- various bugfixes
+
+2.1.5
+- Hungarian translation was added (thanks to S&Atilde;&iexcl;ndor Csaba)
+- jQuery::dimension plugin was updated to 1.0.1
+- tooltips frontend implementation (the jQuery part) was rewritten
+- tooltips css was improved for Internet Explorer
+
+2.1.4
+- P4A_Field::setType('color') was added with nice color picker plugin (fabrtastic) from jQuery
+- a bug with file upload error trapping was solved
+- FCKEditor was updated to 2.4.3
+- jQuery was updated to 1.1.3.1
+- jqModal was updated to 2007.07.30 +r10
+- P4A_DB_Navigator drag&amp;drop functionalities were implemented thru jQuery
+
+2.1.3
+- a javascript error in p4a.js was fixed
+- better error messages were introduced on query errors
+- ADODB was updated to 495a
+- loading won't fade in/out anymore
+- popups now have a 20px default padding
+
+2.1.2
+- P4A_Field with file upload now supports ajax calls to upload/delete the file
+- a nicer style for tooltips was added
+- a nicer style for popups was added
+- ajax calls now block the UI to avoid concurrency troubles
+- various error checks were added and ajax error are trapped the right way
+- PEAR::File was dropper
+- PEAR::File_SWF was dropped, operations on flash files are handled by getid3
+- the popups close button now it's a P4A_Button (P4A_Mask::popup_close_button) thus you can intercept on it
+- popup flickering was removed
+- minor internal changes were done
+
+2.1.1
+- PEAR::Validate inclusion was moved to P4A_Validate file
+- ADODB was updated to 495
+- scriptaculous was dropped
+- jquery was added
+- some XHTML validation bugs were fixed
+- PEAR::File 1.3.0RC1 was re-added to P4A PEAR repository
+- PEAR::File_SWF was re-added to P4A PEAR repository
+- getID3 1.7.7 library was added
+- jQuery jqModal/dimensions/jmedia plugin were added to manage the popup and block the background controls
+- P4A_File::getasFile() method now supports previewing of audio and video files thanks to jmedia
+- P4A_Field::setTooltip(), P4A_Field::getTooltip(), P4A_Label::setTooltip(), P4A_Label::getTooltip() methods were added
+- tooltip were implemented using the jqModal jQuery plugin
+- an info icon (16x16) was added, used for tooltips
+- popup template is now simpler and has a close icon
+- P4A_Swf_Object function was dropped
+- P4A_Is_Mime_Type_Embeddable function was added
+- P4A_Embedded_Player function was added
+- a bug in P4A_DB::singleton() method was fixed (thanks to Raffaele Candeliere)
+
+2.1.0
+- P4A_Data_Field::setSequence() method can handle null values to disable sequence on field
+- the P4A helpers system was introduced (with P4A_Mask::useToolbar(),  P4A_Field::loadSelectByTable(), P4A_Mask::setTableAsSource() and P4A_Frame::anchorTabPane())
+- P4A_Mark::setFocus() method now stores only the id of the focused object instead the object itself
+- now P4A_Mark::setFocus() also works with AJAX requests
+
+2.0.6
+- P4A_Tab_Pane::nextPage() method was added
+- P4A_Object::intercept() 3rd param (method) is now optional, if empty the method name will be equal to the action name
+- some small changes to P4A_Tab_Pane were done
+- a bug on the new P4A_DB_Source multivalue algorithm was solved (thanks to therealpecus)
+- P4A_DB_Source::addMultivalueField() 2rd argument (table) is now optional, if empty it will be equal to the field name
+
+2.0.5
+- a new optimized algorithm for saving multivalue fields on db was implemented
+- P4A_Dir_Source was added
+- a hack to solve a mystic mysql bug was added (http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1666868&amp;group_id=98294&amp;atid=620566)
+- a bug with P4A_DB_Source::setLimitQuery was solved
+
+2.0.4
+- some small optimizations were done on p4a_db adapter
+- a small change was done on products_catologue sample
+
+2.0.3
+- a bug with mask's icon was fixed
+
+2.0.2
+- P4A_VERSION is now printed in the mask's footer
+
+2.0.1
+- a bug with mask's icon was fixed
+
+2.0.0
+- P4A_DB_Navigator now automatically call a redesign action
+
+2.0.0-beta4
+- a bug on P4A_DB_Source was solved (due to the porting to ADODB)
+- P4A_Tab_Pane was nearly rewritten from scratch
+- triggered events page on website (http://p4a.sf.net/triggered-events) was updated
+- P4A_Frame::anchorCenter() now automatically adds a new row to the frame
+- FCKEditor was updated to 2.4.1
+
+2.0.0-beta3
+- a small patch to fck file manager connector was added to avoid possible path configuration problems
+- P4A_Fieldset title now has a bit more of margin
+- P4A_Mask::saveUploads() method was added just to split the P4A_Mask::saveRow() and allow better customization
+- a bug with P4A_Table dimensions was solved
+- a bug with centering objects was solved
+- some work on sidebar_left and sidebar_right was done
+- a bug on P4A_Mask_Error was fixed
+- a css border was removed from P4A_Fieldset
+- a bug with P4A_DB_Navigator was solved
+- now file fields are removed while doing ajax submits
+
+2.0.0-beta2
+- P4A_AUTO_MAXLENGTH is now disabled by default
+- Afrikaans translation was added (thanks to Ewald Horn)
+- now we handle when db driver returns &quot;table.field&quot; as field name
+- a bug with rich text editor file manager was solved
+
+2.0.0-beta1
+- if you use P4A_DB_Source::setQuery now every field become readonly
+- a bug with P4A_DB_Source::_composeSelectCountQuery() and UNION queries was solved (thanks to alexiadeath)
+- P4A_Tab_Pane CSS is now loaded by default
+- P4A_Table::setVisible cols now also manages column order
+- a bug on P4A::openPopup() passing javascripts thru an ajax call was solved
+- P4A::isPopupOpened() was added
+- P4A::openMask() can now be called thru an ajax action
+- now a single P4A_Table row can be disabled, you need to intercept the beforeDisplay on P4A_Table_Rows object and add a &quot;_p4a_enabled&quot; index to the row setting it to true/false
+- P4A session browser was added (clone your browser window with CTRL-N and add in the address bar ?_p4a_session_browser)
+- P4A_I18N::autoFormat() and P4A_I18N::autoUnformat() now support booleans
+- auto translate booleans inside P4A_Table was implemented
+- a bug with P4A_Toolbar::setSize() was solved
+- P4A_Array_Source now can load simple array (field 0 is created)
+- P4A_Tab_Pane::addPage() was implemented
+- P4A_DB_Navigator::enableSelectedElement() was added to allow user to click also on the selected element
+
+1.99.22
+- P4A_Is_Error(), P4A_New_Line() and P4A_Space() were removed
+- DB adapter (adodb) inclusion was moved to p4a_db.php thus it's easier to use p4a_db outsite a p4a application
+- P4A_Field::setError() was added
+- P4A_Validate class was added to check emails/uris/dates/numbers etc... (now it simply uses PEAR::Validate)
+- some changes were done on products_catalogue sample application
+- New rich_textarea skin was added
+
+1.99.21
+- PEAR::Console_Getopt 1.2.2 was re-introduced to avoid installation problems
+- P4A_Object::dropIntercept() method wad added
+- P4A_Table::addActionCol() method was added
+- P4A_Table_Col::setValue() method was added
+
+1.99.20
+- PEAR 1.5.0 base package was re-introduced to avoid installation problems
+
+1.99.19
+- a bug with P4A_Object::errorHandler() was fixed
+- PEAR::MDB2 was dropped
+- ADODB 494 was introduces as the new database abstraction library
+- automatic sequence detection/creation on numeric/primary key was added
+- P4A_AUTO_DB_SEQUENCES (default to true) constant was added to enable/disable automatic sequence detection/creation
+- PEAR packages stripdown, all basic pear packages were removed cause they're always present on PHP servers
+- PEAR::File and PEAR::File_SWF were removed cause they were unused
+- PEAR::Date was updated to 1.4.7
+- a bug with P4A_Table and long numbers formatting was fixed
+- PEAR::HTML_Template_Flexy and P4A_Template_Engine were dropped
+- all templates were converted to PHP templates, gaining performance
+- P4A_AJAX_DEBUG should not be set to &quot;true&quot; anymore but should be set to the path of the debugging file
+- P4A_COMPILE_DIR was removed cause unused
+- P4A_DB::singleton() now returns a P4A object instead of the DB adapter, thus it will be easy in the future to port on other DB adapters
+
+1.99.18
+- .svn directories are now excluded from the automatic inclusion system
+- a bug with p4a.js form2string was fixed (regarding escaped characters) (thanks to Nenad Trupka)
+- Croatian traslation was added (thanks to Nenad Trupka)
+- some fixes were applied to Croatian formats (thanks to Nenad Trupka)
+- PHP closing tag was removed from all translation and format files
+
+1.99.17
+- PEAR was updated to 1.5.0
+- phpThumb was updated to 1.7.7
+- P4A_Table_Rows::disable() is now correctly handled
+- P4A_Widget::setDefaultLabel now automatically looks within translations
+- a new sample (sample_i18n) was added to show how to localize your applications
+- a bug with ajax widgets redesign was solved
+- P4A_Table now passes the clicked column name to the interceptor
+
+1.99.16
+- masks icons are rendered only if not on handheld
+- a bug with P4A_Tab_Pane height was solved
+- tinyMCE was dropped due to the bugs with ajax environment
+- FCKeditor 2.4.0 was introduced (no support for toolbar customization at the moment)
+- P4A_APPLICATION_NAME rules were changes making easier to include P4A from outside
+- _upload_path action wa added to the main action dispatcher thus now it's possible to retrieve upload path of p4a_fields from outsite
+- the way of calling the FCKeditor file manager connector was changed, now the upload path is not passed anymore
+- Scriptaculous was updated to 1.7.0
+- Prototype was updated to 1.5.0
+- onBlur(), onDblClick(), onFocus(), onMouseDown(), onMouseMove(), onMouseUp(), onSelect() methods were added to P4A_Widget
+- a bug on date fields with onchange action was solved
+
+1.99.15
+- some more error messages were put in the code
+- P4A_Mask::setIcon(), getIcon(), setIconSize and getIconSize() were added
+- P4A_VERSION constant was added
+- P4A::getVersion() method was added to retrieve P4A version used
+
+1.99.14
+- First Ajax Popup implementation
+- P4A_MASK::isPopup() was added
+- P4A_MASK::getAsString() was added
+- P4A::openPopup() was added
+- P4A::closePopup() was added
+- popup.js was added
+- popup.tpl was added
+- beforeSetActivePage handler was added to P4A_Tab_Pane
+- afterSetActivePage handler was added to P4A_Tab_Pane
+- a bug in P4A_Collection::nextItem was fixed
+- PEAR::Console_Getopt was updated to 1.2.1
+- PEAR::Validate was updated to 0.7.0
+- PEAR::MDB2 was updated to 2.3.0
+- PEAR::MDB2_Driver_mysql was updated to 1.3.0
+- PEAR::MDB2_Driver_mysqli was updated to 1.3.0
+- PEAR::MDB2_Driver_oci8 was updated to 1.3.0
+- PEAR::MDB2_Driver_pgsql was updated to 1.3.0
+- PEAR::MDB2_Driver_sqlite was updated to 1.3.0
+- if showPrevMask is called within a popup, the popup is closed
+- P4A_Collection now checks if an object still exists when doing nextItem(), if it was destroyed, then the collection is updated removing the reference
+- &quot;prototype&quot; javascript library was updated to 1.5.0_rc2 to avoid multicheckbox ajax submit bug
+- length property and setLength()/getLength() methods were added to P4A_Data_Field
+- P4A_AUTO_MAXLENGTH constant was added (default = true)
+- P4A_Field::getAutoMaxlength() was added
+- automatic maxlength html attribute compilation was added (reading from the attributes of the data field coming from a db), available only for text/password fields
+- P4A_Widget::setProperty(), P4A_Widget::getProperty(), P4A_Widget::unsetProperty() now turn property name to lower case
+- Bug 1616552 was solved, now anchoring invisible widgets on P4A_Frame or P4A_Fieldset does not use space on the page
+- ajax debug file is now created under P4A_COMPILE_DIR instead of session.save_path directory
+- switched 10px margin from frame/fieldset to widgets
+- Bug on processAjaxResponse was solved
+- Various IExplorer6 bugs was solved
+
+1.99.13
+- Internet Explorer 7 is now correctly detected and p4a does not include png and pure css menu hack
+- a bug on P4A_DB_Source with multivalue fields was fixed
+
+1.99.12
+- a bug on P4A_DB_Source with multivalue fields was fixed
+
+1.99.11
+- P4A_Frame::clean() was added to reset anchored objects map
+- PEAR::HTML_Template_Flexy was updated to 1.2.5
+- PHP closing tag was removed from all files
+- P4A_Widget::onKeyUp() was added
+- P4A_Widget::onKeyDown() was added
+- P4A_Data_Field::getSQLNewValue() was added for safe query
+- P4A_Data_Field::getSQLValue() was added for safe query
+- P4A_Field::getSQLNewValue() was added for safe query
+- P4A_Field::getSQLValue() was added for safe query
+- Keyboard keycode now is passed as param to P4A_Widget::onKeyUp(),onKeyDown(),onKeyPress() handlers
+- getKeyPressed() was added to p4a.js
+- onsubmit=&quot;return false&quot; was added to p4a_mask form
+- a bugfix on P4A_DB_Source::getNumRows() with group by was done
+- some error checks were added to P4A_DB_Source::getNumRows()
+- a bug on P4A_DB_Source::getFilters() was fixed
+- P4A_DB_Source::rowByPk() was added to move a db source using the pk values
+- error check was added to P4A_DB_Source::getPkRow()
+- a bug in P4A_Number::unformat() with negative numbers was fixed (thanks to therealpecus)
+- some code has been beautified
+
+1.99.10
+- TinyFCK was updated to 0.16 (TinyMCE 2.0.8)
+- some TinyMCE options were changes to get better XHTML strict validation (align was removed)
+- Bulgarian translation was added (thanks to Angel Grancharov)
+- P4A_DB_Source::getAll always returns an array (fixing a bug on PEAR::MDB2)
+- P4A_Table now goes to page one if current page is empty
+- constant P4A_FIELD_CLASS was added so now you can extend P4A_Field and tell the system what field class to use
+- apply icon was added (32x32)
+- scriptaculous was update to 1.6.5
+
+1.99.9 - Thank you to mechano (http://www.mechanicamente.it) for the second donation!
+- window's title was added to sample applications
+- strict validation bugfixes on P4A_Widget were done
+- a typo in P4A_DB_Source::dropFilter() was fixed
+- a bug with clone() function (php&lt;5) was fixed
+
+1.99.8 - Thank you to zukunft.com for the first donation!
+- P4A_DB_Source::getFilters now works also with multivalue fields
+- function htmlspecialchars_decode was added if php&lt;5.0
+- Serbian translation was added (thanks to Pedja)
+- Hindi translation was added (thank to Prashant Singh Pawar)
+- a bug on P4A_Field::getAsImage() was fixed
+- phpThumb was updated to 1.7.4
+- some errors with date_caledar languages were fixed (P4A_I18N_DATE_CALENDAR_LANGUAGE was introduced in format files)
+- CREDITS file was removed, all credits are in the CHANGELOG
+
+1.99.7
+- some bugs with multiple rich_textarea and ajax events were fixed
+- Turkish translation was added (thanks to Ilyas Toker)
+- a bug with disabled rich_textareas was solved
+
+1.99.6
+- beforeMovement and afterMovement event triggers were added to P4A_DB_Navigator
+- P4A_Table_Navigation_Bar now says &quot;page 1 of 1&quot; instead of &quot;page 1 of 0&quot; if data source is empty
+- a bugfix on P4A_Data_Source::firstRow() was done
+- javascript code for setFocus() function was simplified
+- javascript code for onReturnPress() function was changed
+- a bug with P4A_Box constructor was fixed
+- PEAR::Validate 0.6.4 was added to pear repository
+- P4A_DB_Navigator now highlights the droppable item when a draggable is over it
+- P4A_DB_NAvigator does not show the &quot;home&quot; icon if &quot;movements to root&quot; are not allowed (saving space)
+- Chinese Traditional translation was added (thanks to &aelig;—&yen;&aring;&acute;Ž)
+- isSortable(), addOrder(), setOrder(), getOrder(), hasOrder(), dropOrder() were moved from P4A_DB_Source to P4A_Data_Source
+- a bug with ajax autodetection and configuration was fixed
+- P4A_Data_Source::newRow() now triggers beforeMoveRow and afterMoveRow events
+- when a row in a P4A_Data_Source is deleted we move to first row instead of last row (caused troubles with db_navigator)
+- when reloadRow() in called inside a new row we move to first row instead of last row (caused troubles with db_navigator)
+- some other minor bugfixes were done
+
+1.99.5
+- a folder_home icon (16x16) was added
+- a bug with query2string function for ajax submit was solved
+- P4A_DB_Navigator was moved from contribs to core
+- a bug with P4A_Field::getAsHidden() was fixed
+- some bugfixes for P4A_DB_Navigator were applied
+- P4A_DB_Navigator now supports drag&amp;drop (only active item and AJAX is active)
+- P4A_DB_Navigator::allowMovement() was added to enable/disable drag&amp;drop
+- P4A_DB_Navigator::allowRootsMovement() was added to enable/disable drag&amp;drop of root elements
+- P4A_DB_Navigator::allowMovementToRoot() was added to enable/disable drag/drop of elements to root
+- P4A::init() method was removed
+- javascript calendar widget now supports localized messages
+
+1.99.4
+- PEAR::Net_UserAgent_Detect 2.2.0 was added
+- phpSniff library was dropped
+- browser detection was updated to use PEAR::Net_UserAgent_Detect
+- PEAR::File 1.2.2 was added
+- PEAR::File_SWF 0.1 was added
+- P4A_Mask_Image_Preview was dropped
+- P4A_Mask_Preview was added
+- P4A_Field auto preview was changed to support the new P4A_Mask_Preview
+- P4A_Field support for SWF preview was added
+- fixed a bug with js calendar CSS
+- P4A_Field::setRichTextareaTheme() and P4A_Field::getRichTextareaTheme() were added to manage tinyMCE toolbars
+- P4A_Field::setRichTextareaToolbar(), P4A_Field::getRichTextareaToolbar() and P4A_Field::getRichTextareaToolbars() were added to manage tinyMCE toolbars buttons
+
+1.99.3
+- a TinyFCK/ajax bug was solved
+- P4A_Table_Col afterClick event bug was solved
+- the default .htaccess was removed
+- a bug in P4A_Field::getAsFile() was fixed
+- greek translation was added (thanks to &Icirc;–&Icirc;&plusmn;&Iuml;‡&Icirc;&plusmn;&Iuml;&Icirc;&macr;&Icirc;&plusmn;&Iuml;‚ &Icirc;&pound;&Icirc;&acute;&Iuml;&Icirc;&shy;&Icirc;&sup3;&Icirc;&plusmn;&Iuml;‚)
+
+1.99.2
+- a TinyFCK/ajax bug was solved
+- rich_textarea is automatically disabled on handhelds
+
+1.99.1
+- P4A_ICONS_PATH is now used to generate the spinner path
+- PEAR::MDB2 was updated to 2.1.0
+- PEAR::MDB2_Driver_mssql was updated to 1.1.0
+- PEAR::MDB2_Driver_mysql was updated to 1.1.0
+- PEAR::MDB2_Driver_mysqli was updated to 1.1.0
+- PEAR::MDB2_Driver_oci8 was updated to 0.3.0
+- PEAR::MDB2_Driver_pgsql was updated to 1.1.0
+- PEAR::MDB2_Driver_sqlite was updated to 1.1.0
+- beforeClick and afterClick were added to P4A_Table_Col class
+- a bug was fixed in P4A_Canvas::getAsString();
+- a bug with P4A_Mask::dropCSS() and P4A_Mask::dropTempCSS() was solved
+- P4A_Date can now unformat dates with less then 4 digits year notation
+
+1.99.0
+- P4A_Filename2File was added to P4A Standard library
+- ajax support was added
+- addAjaxAction method was added to p4a_widget class
+- P4A_Widget::redesign() method was added (for ajax)
+- scriptaculos 1.6.1 was added to the default theme
+- PEAR::DB was dropped in favour of PEAR::MDB2 (PEAR::DB was abandoned by its developers)
+- MDB2-2.0.3, MDB2_Driver_mssql-1.0.0, MDB2_Driver_mysql-1.0.3, MDB2_Driver_mysqli-1.0.3, MDB2_Driver_oci8-0.2.6, MDB2_Driver_pgsql-1.0.3, MDB2_Driver_sqlite-1.0.2 were installed
+- a bug on IE file download under SSL was fixed
+- P4A_Data_Source::firstRow(), P4A_Data_Source::nextRow(), P4A_Data_Source::prevRow() and P4A_Data_Source::lastRow() now support the &quot;move pointer&quot; parameter
+- P4A_Table movements now won't move the data source pointer
+- P4A_Table movements are now ajax triggered
+- a loader spinner was added
+- ie7 javascript library was dropped and some ie fixes were introduced
+- P4A_AJAX_DEBUG constant was added (creates p4a_ajax_debug.txt file under session.save_path directory)
+- P4A_AJAX_ENABLED constant was added (automatically disabled on handhelds)
+- P4A_Mask's beforeMoveRow, onMoveRow and afterMoveRow triggers were deleted (they were mark as deprecated)
+- data type autodetection was ported to MDB2 datatypes
+- P4A_Menu_Item now supports icons (setIcon() and getIcon())
+- a bug about P4A_Fieldset on IE was fixed
+- many minor bugfixes and beautifications
+
+1.0.0
+- P4A_Frame, P4A_Canvas and P4A_Sheet now checks if object were destroyed before rendering
+- a bug in P4A_Number::format was fixed (it prevented setNewValue(0) to work)
+- some code beautification were done
+
+0.99.12
+- Persian translation was added (thanks to JraNil)
+- Catalan translation was added (thanks to Alvaro Gilabert)
+- PEAR::Calendar 0.5.3 was added to libraries
+- PEAR::Date 1.4.6 was added to libraries
+
+0.99.11
+- now is possible to do P4A_Widget::useTemplate('dir/file')
+- P4A_Toolbar::addLabel() method was added
+- a bug on P4A_Date::get_month_name() was fixed
+- a bug on P4A_Table was fixed
+- a bug with framework-wide libraries was fixed
+- P4A_Frame can now handle if an anchored object was destroyed
+- P4A_Toolbar(s) constructor was splitted to allow better customization
+- some minor beautifications were done
+
+0.99.10
+- P4A_Array_Source::load() now can be called more than one time to change the data inside the array_source
+- TinyFCK was updated to 0.12
+- a bug about invisible labels for read-only P4A_Field was solved
+- a bug with P4A_I18N_Messages::get() was solved
+- Slovenian translation was added (thanks to Jernej Zorec)
+
+0.99.9
+- P4A_Data_Source, P4A_DB_Source and P4A_Array_Source now trigger beforeMoveRow, onMoveRow and afterMoveRow events
+- P4A_Mask's beforeMoveRow, onMoveRow and afterMoveRow triggers are declared as &quot;deprecated&quot; and will be removed in 1.2
+- some minor beautifications
+
+0.99.8
+- a bugfix about P4A_Date::unformat was fixed (1468679 - string padding)
+- Polish translation was updated
+- Danish translation was added (thanks to spinello)
+- PEAR was updated to 1.4.9
+- some minor bugfixes were made
+
+0.99.7
+- added a &quot;clone&quot; function to emulate php5 cloning system
+- a php5 warning bug was solved
+- P4A_DB_Source::setQuery() now automatically generates the counting query
+- bug n. 1467199 on P4A_Field::getAsString() was solved
+- minor beautifications were done
+
+0.99.6
+- a bug with mt_MT locale was fixed
+- a complete syntax check was done on all files
+- a bug with P4A_DB_Source about multiple join with homonym	fields was fixed
+
+0.99.5
+- a bug in P4A_Data_Source was fixed
+- a bug with P4A_DB_Source::__sleep was fixed
+- polish translation was added (thanks to Artur Stuczy&Aring;„ski)
+- a bug with P4A_Field::getAsRadio() was fixed
+
+0.99.4
+- tinyFCK updated to 0.10
+- a bug with rich textarea upload was fixed
+- a bug with null dates/numbers formatting was fixed
+- XHTML width/height for P4A_Button were restored
+- now P4A_Button::setSize() supports width and height with WIDTHxHEIGHT format
+- a minor bugfix on P4A_Table CSS was made
+
+0.99.3
+- indonesian translation added (thanks to Akhmad Daniel Sembiring)
+- japanese translation added (thanks to Tony Kimball)
+- P4A_DB_Source now correctly handle multiordering/multipk
+- fixed a bug that prevented the DHTML calendar to show correctly
+- fixed a bug with P4A_DB_Source::setPageLimit(0)
+- some documentation fixes were done
+
+0.99.2
+- chinese translation was added (thanks to Tony Kimball)
+- bugfix on XHTML validation for P4A_Field::getAsDate()
+- removed scrollbar's css for better css validation
+- P4A_Widget::noUseTemplate() was removed because wrong, you can do P4A_Widget::useTemplate(false) instead
+- P4A_Widget::clearDisplay() was renamed to P4A_Widget::clearTemplateVars()
+- PEAR was updated to 1.4.8
+- P4A_Table now implements the &lt;COL&gt; tag, resulting HTML was cleaned up
+
+0.99.1
+- the &quot;new&quot; icon was changes from &quot;pencil&quot; to &quot;document&quot;
+- getAsMulticheckbox now rendered with checkbox + label
+- a system was introduced to avoid browser's back/forward problems
+- bugfix on P4A_Button, now l10n labels work again
+- minor bugfixes and documentation changes
+
+0.99.0
+- slovak translation was added (thank to Tomas Lopasovsky)
+- czech translation was completed (thanks to hanny)
+- fixed a bug with non ordered P4A_DB_Source in P4A_Table
+- PEAR was updated to 1.4.7
+- minor bugfixes
+
+0.45
+- dutch translation added (thanks to fidodildo)
+- fixed a bug on P4A_Table_Col of image type
+- P4A_Table now use GD (if available) to display images thumbnails
+- fixed an error on &quot;am/pm&quot; management in reverse formatting of time data
+- TinyFck's filemanager is now restored
+
+0.44
+- TinyFCK was updated to 0.8
+- locales were rebuilt with a new conversion engine, fixing some bugs
+
+0.43
+- phpThumb 1.6.2 was added in libraries
+- if GD are installed image preview call phpThumb to generate thumbnails
+- gettext like __(&quot;string&quot;) function has been added, alias of $p4a-&gt;i18n-&gt;messages-&gt;get(&quot;string&quot;)
+- German translation completed (thanks to ibus)
+- Romanian translation completed (thanks to Andrew and Giorgio Rimmer)
+- P4A_Table now supports left/right alignment based on data type
+- many improvements for handheld rendering
+- some bugfixes on XHTML validation
+- some bugfixes on print css
+- minor bugfixes and beautifications
+
+0.42
+- bugfix on P4A_DB_Source::getFilters(), filtering now works with fields and data_fields
+- French translation completed
+
+0.41
+- many translations added, look at http://p4a.sourceforge.net/translations
+- a few translation strings were added (for P4A_Table)
+- fixed some bugs with the i18n/l10n engine
+- Portuguese translation completed (thanks to Tiago)
+- Estonian translation completed (thanks to Eero)
+- Spanish translation completed (thanks to Vanesa Callejo)
+- Russian translation completed (thanks to &ETH;&reg;&Ntilde;€&ETH;&cedil;&ETH;&sup1; &ETH;‘&ETH;&plusmn;)
+- Norvegian translation added (thanks to Jostein)
+- bugfix on P4A_DB_Source::getFilters(), filtering with formatted fields now works
+
+0.40
+- TinyFCK was updated to 0.5
+- P4A_Listener was removed because it was obsolete and unused
+- P4A_Menu was totally refactored, dropping some methods
+- PEAR packages were updated and cleaned out (now we only have PEAR 1.4.6, Console_Getopt 1.2, DB 1.7.6, HTML_Template_Flexy 1.2.4)
+- new l10n formats loaded, 168 locales available
+- bugfix on es_ES translations (removed htmlentities =&gt; UTF-8)
+- some code reference was written
+
+0.39
+- fixed bug 1407473 (password obfuscator was shown also on null values)
+- feature request 1413696 (removing non existing file does not produce a fatal error anymore)
+- P4A_DENIED_EXTENSIONS constant was added
+- P4A_Get_File_Extension() function was added to library
+- P4A_Is_Extension_Allowed() function was added to library
+- fixed bug 1404846 (when uploading a file with denied extension you'll get a fatal error)
+- some methods were documented in the code reference
+
+0.38
+- Multiple DB connection support was added
+- added setDSN method to p4a_db_source
+- added getDSN method to p4a_db_source
+- added setDSN method to p4a_data_field
+- added getDSN method to p4a_data_field
+- minor changes
+- P4A_Box widget was added, it renders raw html
+- Rich Text Editor was updated to TinyFCK 0.4
+- Rich Text Editor image resizing was modularized a bit
+- bugfix on RTE image resize
+- minor changes
+
+0.37
+- MySQL Manager was removed from the main package and released as a contrib
+- Base application contrib was released
+
+0.36
+- added CHANGELOG, README, COPYING and TODO files to code reference
+- backward compatibility issue with P4A_Button was fixed
+- a &quot;find&quot; icon was added (32x32)
+
+0.35
+- P4A_Table_Col can show image thumbnail: P4A_Table_Col::setType(&quot;image&quot;)
+- P4A_Button can show icon and label at the same time
+- rich text editor support original image reduction: $Config['ImageSize']['__original__'] = &quot;800x800&quot;;
+- a little spanish translation bug was fixed
+- minor changes to tab_pane widget css were made
+
+0.34
+- TinyMCE was updated to 2.0.1
+- PEAR packages were updated
+
+0.33
+- release builder script was updated
+- base application was moved to contribs
+- print css for P4A_Tab_Pane was added
+- some bugfixes/cleanup were done on P4A_Field::getAsRadio()
+- P4A_Message::setValue(0) bug was fixed
+- removed &quot;clean on startup&quot; option from tinymce, seems to cause ie problems
+
+0.32
+- P4A_Tab_Pane was added (Thanks to Francesco Dominidiato)
+- enabled rich text editor image resize (documentation on website)
+- TinyMCE was updated to 2.0RC4
+
+0.31
+- bugfix on P4A_Table, now ordering works well
+- bugfix on P4A_DB_Source, now addOrder() and setOrder always turn the ordering mode to uppercase
+- PHP 4.4 P4A_Collection::nextItem() bugfix
+- rich text editor now support image resizing (libGD support needed) (disabled by now)
+- various bugfix and beautification
+
+0.30
+- PHP 4.4 porting completed (deep tests are needed)
+- sample htaccess was added (needed to set some PHP settings that we can't set at runtime)
+- TinyMCE rich text editor was introduced instead FCKEditor
+- CKEditor file browser/upload was integrated in tinyMCE
+- P4A_Field::enableUpload() was added
+- P4A_Field::enableFileUpload() and P4A_Field::enableImageUpload() were removed
+- fixed the setDefaultValue(0) bug
+- various bugfixes and code beautification
+
+0.29
+- Template engine is now Flexy, many constants in config.php were dropped and template were heavily changed
+- ie7 library was updated to 0.9
+- P4A_REQUIRE_APPLICATION now supports application name or application dir
+- mb_internal_encoding is set to UTF-8 if mbstring extension is available
+- P4A_DB_Source::dropOrder() was added
+- fixed P4A_Button::getAsString(), when icon is rendered, width and height are printed (now we can only have square icons)
+- fixed P4A_Table_Col visibility issues
+- fixed a bug about charset in mask's default template
+- fixed a bug within P4A_Mask constructor (internal variable _name is now lowercase)
+- PEAR packages were updated
+- P4A_Table::isRollable(), P4A_Table::enableRollup(), P4A_Table::disableRollup(), P4A_Table::rollup(), P4A_Table::expand() and P4A_Table::collapse() were removed
+- code cleanup, documentation added
+
+0.28
+- removed some unused CSS from screen.css
+- added a &quot;generic_file&quot; icon (16x16)
+- phpsniff library was removed from phpdocumentor source list
+- FCKEditor was updated to 2.0
+- safari was added to the compatibility list (thanks to Francesco Dominidiato)
+- FCKConfig.ToolbarCanCollapse is now set to off (thanks to Francesco Dominidiato)
+- fixed a bug on image preview mask printing (thanks to Francesco Dominidiato)
+- image preview mask now show the file name in the title
+
+0.27
+- afterUpload event trigger was added
+- FCKConfig.ProcessHTMLEntities is now off (thanks to Francesco Dominidiato) ;
+- standardized accesskey notation in P4A_Button, now it renders as &quot;[S] Save Row&quot; instead of &quot;Save Row (ALT+S)&quot;
+- bugfix on mysql_manager application
+- P4A_I18N_Messages::get() now also accept no params, returning all messages
+- asc/desc/selected alt for images were added to P4A_Table
+- contribs were introduced, thanks to Major__Tom
+
+0.26
+- PEAR packages were updated fixing some security issues
+
+0.25
+- bugfix on P4A_Data_Source::prevRow(), now works well when calling it on the first row of a data source
+- bugfix/beautifications on products_catalogue application
+- bugfix on P4A_Table for a better rendering
+- changed P4A_Table_Rows onBeforeDisplay, we cannot pass $rows by reference, thus you've to return $rows from your action handler
+
+0.24
+- changed XHTML output for textarea and rich_textarea, now HTML code in the value is escaped with htmlspecialchars(), allowing XHTML 1.1 validation
+- added P4A_Quit_Toolbar, with only two buttons: print and quit
+- added P4A_Mask_Image_Preview, system mask to view images preview
+- many changed on the output of Field::getAsFile() ans Field::getAsImage()
+  - removed the HTML links
+  - added preview button for images
+  - added download button
+- changed P4A_Href::composeStringActions(), converted to XHTML parameter separator (&amp;amp; instead of &amp;) (check your php.ini configuration to support this feature)
+- changed P4A_Data_Source::exportAsCSV(), added a die() on the last row
+- renamed toolbar files in p4a/objects/widgets/toolbars
+- some code was beautified
+- updated TODO
+
+0.23
+- removed P4A_Menu_Item::setActive() and P4A_Menu_Item::setNoActive()
+- changed top margin calculation into mask default template (themes/default/masks/default/default.tpl)
+- textarea now have default width=500px, height=200px
+- rich_textarea now have default width=500px, height=300px
+- textarea and rich_textarea also have rows/cols properties
+- removed some garbage from screen.css
+- P4A_Menu is now pure XHTML/CSS (thanks to Justin Koivisto) and multilevel, removed template and javascript
+- some code/css has been beautified
+- done a lot of work work on XHTML 1.1 validation (still not finished)
+- changed the internal CSS array structure, thus P4A::addCSS() and P4A::dropCSS() are changed
+- added javascript and css local to every mask, thus P4A_Mask::addCss() and P4A_Mask::dropCss() were added
+- added temporary javascript and css local to every mask, thus P4A_Mask::addTempCss() and P4A_Mask::dropTempCss() were added. These javascripts/css are dropped immediately after rendering
+- changed the default mask template to reflect the CSS handling changes
+- fixed a bug with date_calendar widget, now it's possible to have more than one calendars on a mask
+- dropped date_calendar.tpl because it's not used anymore
+- added themes/default/widgets/date_calendar/p4a.js with some javascript code
+- changed the inclusion system for date_calendar and rich_textarea widget, now all javascript/css are included only once
+- added possibility to extend a P4A Application
+- added P4A_Base_Application (non included in the p4a release because we need documentation)
+- added P4A_Simple_Toolbar
+- fixed a bug in P4A_DB_Source::_composeSelectPkQuery() with joined tables
+- updated TODO
+- updated README
+
+0.22
+- fixed a bug in P4A_DB_Source with multivalue fields
+- added P4A_Field::getAsMulticheckbox(), use it with $field-&gt;setType('multicheckbox')
+- some code has been beautified
+- updated CREDITS
+- updated TODO
+
+0.21
+- all actions and events are now lowercase, also to print out corrected XHTML
+- fixed a password rendering bug: if a password field is not filled, now you'll not see the obfuscator after submit
+- renamed &quot;menu_drop_down&quot; template to &quot;menu&quot;
+- removed P4A_Menu::setType()
+- removed tabbed menu
+- removed P4A_Sheets_Group widget
+- some bugfixes in CSS
+- added P4A::addJavascript() and P4A::dropJavascript()
+- changed javascript file inclusion in masks templates
+- updated TODO
+- updated README, removed info about untested browsers
+- ie7 (http://dean.edwards.name/IE7/) library has been implemented (thanks to Francesco Dominidiato)
+
+0.20
+- fixed screen.css bug on Internet Explorer
+- added beforeMoveRow,onMoveRow and afterMoveRow on P4A_Mask::nextRow()
+
+0.19
+- upgraded all pear packages
+- added constant P4A_FORCE_HANDHELD_RENDERING to force handheld rendering on any device (useful to have a handheld preview)
+- handheld CSS now has a sans-serif font
+- handheld CSS now has a nice color for all the links
+
+0.18
+- updated rich text editor (FCKeditor 2.0 FC)
+
+0.17
+- done some PHP5 fixes, seems to work fine but we need more tests
+- updated TODO
+- created CREDITS file and moved credits from README
+- updated some copyright informations
+- fixed an error in CHANGELOG
+
+0.16
+- updated TODO
+- disabled P4A_Sheets_Group and tabbed menu because they're not completed
+- updated all copyright informations
+
+0.15
+
+- now p4a_message can handle messages without icons
+- some language fixes in the &quot;products_catalogue&quot; application
+
+0.14
+- fixed a bug in P4A_Number::format, if null is passed, null is returned (not zero)
+- added P4A_Message::autoClear() to enable/disable auto clearing of messages
+- removed P4A_Label::setType() because it were formally uncorrect
+- P4A now can handle file/image uploads within rich_textarea fields (disabled by default)
+- added P4A_Field:enableFileUpload() and P4A_Field:enableImageUpload()
+
+0.13
+- various bugfix in P4A_Link
+- updated caledar widget to 1.0
+- added P4A_Table_Col::setOrderable() and P4A_Table_Col::isOrderable() to set and check the possibility to enable the &quot;order by&quot; on a column
+- added the possibility to intercept the &quot;beforeDisplay&quot; event on P4A_Table
+
+0.12
+- added folder.png and folder_open.png images in 16x16 pixels icons
+- updated rich text editor (FCKeditor 2.0 RC3)
+- now P4A_Field::getAsLabel() correctly handle multiline content
+- P4A_Widget now instance a &quot;handheld&quot; smarty variable, passed to the template
+- now P4A_Field::getAsDate() correctly manage handheld devices
+- added some copyright notes to array_source.php, db_source.php, collection.php, data_source.php
+- removed multivalue_field.php because it was obsolete
+- removed P4A_Mask::addMultivalueField() because it was obsolete
+- done some work on config.php to allow p4a to stay out of the document root (must have an alias set to /p4a), take a look at docs/httpd.conf
+- added P4A_Mask::getPrevMask() and P4A::getPrevMask() to get an instance of the previous opened mask
+- updated TODO
+- updated READMEs
+- bugfix in P4A_Table, now ordering works well with aliased fields
+- changes in P4A_Frame, when viewed by an handheld no divs are generated and all elements float left (Pocket IE seems to not support floats)
+- optimized P4A_Table_Navigation_Bar output for handhelds
+- bugfix in P4A_Table_Navigation_Bar::addButton(), now margins are correct
+- code cleanup
+- removed some obsolete files
+- handheld css change: now mask's title is centered
+- handheld css change: now fieldset' title is centered
+- handheld css change: now table's width is forced to 100% to avoid Pocket IE problem
+
+0.11
+- bugfix in MySQL Manager
+- navigation bar bugfix in P4A_Table
+- print css bugfix
+- moved some inline css to external files
+- output HTML optimizations
+
+0.10
+- moved some locale files, now ru_RU.CP121 and ru_RU.KOI8-R work again
+- bugfix in getAsFile method in P4A_FIELD
+- bugfix in saveRow method in P4A_DB_SOURCE
+- bugfix in getAsDate method in P4A_FIELD
+- null value bugfix in saveRow method on P4A_DB_SOURCE
+- improved check_configuration library
+
+0.9
+- all javascript moved in p4a.js, the default form is now named &quot;p4a&quot;
+- fixed a bug in mask default template, no javascript was included
+- added the ability to detect handheld devices (a browser that does not support css2 is considered handheld)
+- new library (phpSniff) to detect Internet Explorer
+- optimized output HTML, cleaner and lighter
+
+0.8
+- changed P4A_MESSAGE layout
+- fixed fieldset ie bug
+- fixed deleteRow method on P4A_DATA_SOURCE
+- fixed screen.css in default theme
+- fixed anchorCenter bug in P4A_FRAME
+- fixed anchorCenter bug in P4A_FIELDSET
+- fixed an error P4A_FIELD::setNewValue that prevented the system from handling 0 as numeric value
+
+0.7
+- code cleanup
+- added P4A_Navigation_Toolbar, a new default toolbar with &quot;first&quot;, &quot;prev&quot;, &quot;next&quot;, &quot;last&quot;, &quot;exit&quot; buttons
+- updated TODO
+- various bugfixes
+
+0.6
+- renamed changelog to CHANGELOG
+- added TODO file
+- added setlocale(LC_NUMERIC, &quot;C&quot;) to avoid php 4.3.10 problems with numeric locales
+- added setlocale(LC_MONETARY, &quot;C&quot;) to avoid php 4.3.10 problems with numeric locales
+- fixed P4A_TOOLBAR, now spacers work correctly
+- fixed P4A_IMAGE, now supports the new default icon path
+- added spacer.png image into icons
+- DATA_SOURCE::getAsCSV() now suports fields names
+- renamed DATA_SOURCE::exportToCSV() to DATA_SOURCE::exportAsCSV()
+- added DATA_SOURCE::exportToCSV() as an alias of DATA_SOURCE::exportAsCSV()
+
+0.5
+- fixed a file upload bug that prevented a correct behaviour when the web server is listening on a port differt from 80
+- fixed a bug in DATA_SOURCE filters engine
+- added a message to MySQL Manager to suggest using Firefox
+- fixed a bug in ARRAY_SOURCE getAll
+- fixed a bug in ARRAY_SOURCE load
+
+0.4
+- removed pear/pear.php that caused errors on windows installation
+- fixed various errors in array_source
+- fixed a reference in frame
+- various bugfixes
+
+0.3
+- changed PEAR repository management, now with web interface we can easily install/upgrade/remove PEAR modules
+- added deleteRow to DATA_SOURCE interface
+- added deleteRow to ARRAY_SOURCE
+- moved some code for deleteRow from DB_SOURCE to DATA_SOURCE, now used also from ARRAY_SOURCE
+
+0.2
+- now db_source reload num_rows on setWhere, addFilter, dropFilter
+- changed doctype for default template, now we're xhtml 1.1 (not validated, work in progress)
+- changes in default template to start the xhtml validation
+- fixed getAll in P4A_Array_Source
+- fixed page in P4A_DB_Source
+- fixed a problem with table and handheld Pocket Internet Explorer 2003
+- added index.php file into applications directory, just for a redirect
+- beautified handheld css
+
+0.1
+- initial release
+
+</pre>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 10 Aug 2011 22:26:57 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class P4A_DB_Navigator</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> P4A_DB_Navigator</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This widget allows a tree navigation within a P4A_DB_Source.</p>
+<p class="description"><p>Note that on Opera the drag&amp;drop feature has serious performance issues,  while it's working smoothly on all other certified browsers.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Andrea Giardina &lt;<a href="mailto:andrea.giardina@crealabs.it">andrea.giardina@crealabs.it</a>&gt;</li>
+				<li><span class="field">author:</span> Fabrizio Balliano &lt;<a href="mailto:fabrizio@fabrizioballiano.it">fabrizio@fabrizioballiano.it</a>&gt;</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2003-2010 Fabrizio Balliano, Andrea Giardina</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_p4a---objects---widgets---db_navigator.php.html">/p4a/objects/widgets/db_navigator.php</a> (line <span class="field">39</span>)
+		</p>
+		
+				
+		<pre><a href="../p4a/P4A_Object.html">P4A_Object</a>
+   |
+   --<a href="../p4a/P4A_Widget.html">P4A_Widget</a>
+      |
+      --P4A_DB_Navigator</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$allow_movement_to_root" title="details" class="var-name">$allow_movement_to_root</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$allow_roots_movement" title="details" class="var-name">$allow_roots_movement</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$description" title="details" class="var-name">$description</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$enable_selected_element" title="details" class="var-name">$enable_selected_element</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$expand_all" title="details" class="var-name">$expand_all</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$field_to_update_on_movement" title="details" class="var-name">$field_to_update_on_movement</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$recursor" title="details" class="var-name">$recursor</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$root_label" title="details" class="var-name">$root_label</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../p4a/P4A_DB_Source.html">P4A_DB_Source</a></span>
+					<a href="#$source" title="details" class="var-name">$source</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$trim" title="details" class="var-name">$trim</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																								<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">P4A_DB_Navigator</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#allowMovement" title="details" class="method-name">allowMovement</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#allowMovementToRoot" title="details" class="method-name">allowMovementToRoot</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$root_label</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#allowRootsMovement" title="details" class="method-name">allowRootsMovement</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#collapse" title="details" class="method-name">collapse</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#enableSelectedElement" title="details" class="method-name">enableSelectedElement</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enable</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#expandAll" title="details" class="method-name">expandAll</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAsString" title="details" class="method-name">getAsString</a>
+											(<span class="var-type">unknown_type</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getPath" title="details" class="method-name">getPath</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pk</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRootLabel" title="details" class="method-name">getRootLabel</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onClick" title="details" class="method-name">onClick</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onMovement" title="details" class="method-name">onMovement</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#setDescription" title="details" class="method-name">setDescription</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#setRecursor" title="details" class="method-name">setRecursor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#setRootLabel" title="details" class="method-name">setRootLabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#setSource" title="details" class="method-name">setSource</a>
+											(<span class="var-type"><a href="../p4a/P4A_DB_Source.html">P4A_DB_Source</a></span>&nbsp;<span class="var-name">$source</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+										<a href="#setTrim" title="details" class="method-name">setTrim</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$chars</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_getAsString" title="details" class="method-name">_getAsString</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$all</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$obj_id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pk</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$current</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_trim" title="details" class="method-name">_trim</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$allow_movement_to_root" id="$allow_movement_to_root"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$allow_movement_to_root</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">87</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows user to create new root element (with parent_id = null)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$allow_roots_movement" id="$allow_roots_movement"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$allow_roots_movement</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">81</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows user to move also the root elements</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$description" id="$description"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$description</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The description field name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$enable_selected_element" id="$enable_selected_element"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$enable_selected_element</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">93</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is selected element clickable?</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$expand_all" id="$expand_all"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$expand_all</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">63</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Expand whole tree or collapse?</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$field_to_update_on_movement" id="$field_to_update_on_movement"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$field_to_update_on_movement</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">75</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">When moving a record, this field is updated</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$recursor" id="$recursor"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$recursor</span>
+			 = <span class="var-default"> &quot;__recursor&quot;</span>			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The recursion field name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$root_label" id="$root_label"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$root_label</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">98</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$source" id="$source"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../p4a/P4A_DB_Source.html">P4A_DB_Source</a></span>
+			<span class="var-name">$source</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The P4A_DB_Source used for navigation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$trim" id="$trim"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$trim</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">69</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Trim after this number of characters</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$actions">P4A_Widget::$actions</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$enabled">P4A_Widget::$enabled</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$label">P4A_Widget::$label</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$properties">P4A_Widget::$properties</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$style">P4A_Widget::$style</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$template_name">P4A_Widget::$template_name</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$use_template">P4A_Widget::$use_template</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$visible">P4A_Widget::$visible</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$_css_classes">P4A_Widget::$_css_classes</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$_temp_vars">P4A_Widget::$_temp_vars</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$_tooltip">P4A_Widget::$_tooltip</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Widget.html#var$_tpl_vars">P4A_Widget::$_tpl_vars</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../p4a/P4A_Object.html">P4A_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_helpers">P4A_Object::$_helpers</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_id">P4A_Object::$_id</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_map_actions">P4A_Object::$_map_actions</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_name">P4A_Object::$_name</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_objects">P4A_Object::$_objects</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_parent_id">P4A_Object::$_parent_id</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">103</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">P4A_DB_Navigator</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../p4a/P4A_Widget.html#method__construct">P4A_Widget::__construct()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodallowMovement" id="allowMovement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">allowMovement</span> (line <span class="line-number">184</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable/disable movement of setions.</p>
+<p class="description"><p>Note: Movements will work only if P4A_AJAX_ENABLED is true.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			allowMovement
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$field</span><span class="var-description">: (false|P4A_Field parent_id field on your mask)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallowMovementToRoot" id="allowMovementToRoot"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">allowMovementToRoot</span> (line <span class="line-number">226</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable/disable movement of sections to root (parent_id = null)</p>
+<p class="description"><p>Note: Movements will work only if P4A_AJAX_ENABLED is true.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_DB_Navigator.html#methodsetRootLabel">P4A_DB_Navigator::setRootLabel()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			allowMovementToRoot
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$root_label</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allow</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$root_label</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallowRootsMovement" id="allowRootsMovement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">allowRootsMovement</span> (line <span class="line-number">209</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable/disable movement of root sections (parent_id = null).</p>
+<p class="description"><p>Note: Movements will work only if P4A_AJAX_ENABLED is true.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			allowRootsMovement
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allow</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcollapse" id="collapse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">collapse</span> (line <span class="line-number">170</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets if the tree is collapsed or not</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			collapse
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodenableSelectedElement" id="enableSelectedElement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">enableSelectedElement</span> (line <span class="line-number">238</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is selected element clickable?</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			enableSelectedElement
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enable</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$enable</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexpandAll" id="expandAll"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">expandAll</span> (line <span class="line-number">159</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets if the tree is expanded or not</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			expandAll
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAsString" id="getAsString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAsString</span> (line <span class="line-number">248</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAsString
+		</span>
+					(<span class="var-type">unknown_type</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">unknown_type</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../p4a/P4A_Widget.html#methodgetAsString">P4A_Widget::getAsString()</a></dt>
+						<dd>Returns the HTML rendered widget.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetPath" id="getPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getPath</span> (line <span class="line-number">357</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getPath
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pk</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pk</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRootLabel" id="getRootLabel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getRootLabel</span> (line <span class="line-number">455</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRootLabel
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodonClick" id="onClick"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onClick</span> (line <span class="line-number">381</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OnClick event interceptor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onClick
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../p4a/P4A_Widget.html#methodonClick">P4A_Widget::onClick()</a></dt>
+						<dd>Wrapper used to add the handling of onClick action</dd>
+					</dl>
+			
+	</div>
+<a name="methodonMovement" id="onMovement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onMovement</span> (line <span class="line-number">412</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Event interceptor when user moves an element to another subtree</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onMovement
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetDescription" id="setDescription"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setDescription</span> (line <span class="line-number">137</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the field name used to print out the description in the tree</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			setDescription
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRecursor" id="setRecursor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setRecursor</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the field name used to recursively navigate the P4A_DB_Source</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			setRecursor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRootLabel" id="setRootLabel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setRootLabel</span> (line <span class="line-number">446</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Root label is translated at rendering time</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			setRootLabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSource" id="setSource"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setSource</span> (line <span class="line-number">115</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the source of the tree, it must be a P4A_DB_Source</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			setSource
+		</span>
+					(<span class="var-type"><a href="../p4a/P4A_DB_Source.html">P4A_DB_Source</a></span>&nbsp;<span class="var-name">$source</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../p4a/P4A_DB_Source.html">P4A_DB_Source</a></span>
+				<span class="var-name">$source</span><span class="var-description">: The DB source to navigate</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTrim" id="setTrim"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setTrim</span> (line <span class="line-number">148</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Trims description after x chars (0 = disabled)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a></span>
+		<span class="method-name">
+			setTrim
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$chars</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$chars</span><span class="var-description">: Num of chars</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getAsString" id="_getAsString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/PrivateMethod.png" />
+		<span class="method-title">_getAsString</span> (line <span class="line-number">303</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_getAsString
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$all</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$obj_id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pk</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$current</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$all</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$obj_id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pk</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$current</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_trim" id="_trim"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_trim</span> (line <span class="line-number">397</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Trims a text after a fixed number of characters</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_trim
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#method__construct">P4A_Widget::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodaddAction">P4A_Widget::addAction()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodaddAjaxAction">P4A_Widget::addAjaxAction()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodaddCSSClass">P4A_Widget::addCSSClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodaddTempVar">P4A_Widget::addTempVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodchangeEvent">P4A_Widget::changeEvent()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodclearTemplateVars">P4A_Widget::clearTemplateVars()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodclearTempVars">P4A_Widget::clearTempVars()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodcomposeStringActions">P4A_Widget::composeStringActions()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodcomposeStringClass">P4A_Widget::composeStringClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodcomposeStringProperties">P4A_Widget::composeStringProperties()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodcomposeStringStyle">P4A_Widget::composeStringStyle()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methoddisable">P4A_Widget::disable()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methoddisplay">P4A_Widget::display()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methoddropAction">P4A_Widget::dropAction()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methoddropTempVar">P4A_Widget::dropTempVar()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodenable">P4A_Widget::enable()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodfetchTemplate">P4A_Widget::fetchTemplate()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetAccessKey">P4A_Widget::getAccessKey()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetAsString">P4A_Widget::getAsString()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetCSSClasses">P4A_Widget::getCSSClasses()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetHeight">P4A_Widget::getHeight()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetLabel">P4A_Widget::getLabel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetProperty">P4A_Widget::getProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetStyleProperty">P4A_Widget::getStyleProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetTooltip">P4A_Widget::getTooltip()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodgetWidth">P4A_Widget::getWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodisEnabled">P4A_Widget::isEnabled()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodisVisible">P4A_Widget::isVisible()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonBlur">P4A_Widget::onBlur()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonChange">P4A_Widget::onChange()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonClick">P4A_Widget::onClick()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonDblClick">P4A_Widget::onDblClick()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonFocus">P4A_Widget::onFocus()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonKeyDown">P4A_Widget::onKeyDown()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonKeyPress">P4A_Widget::onKeyPress()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonKeyUp">P4A_Widget::onKeyUp()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonMouseDown">P4A_Widget::onMouseDown()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonMouseMove">P4A_Widget::onMouseMove()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonMouseOver">P4A_Widget::onMouseOver()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonMouseUp">P4A_Widget::onMouseUp()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonReturnPress">P4A_Widget::onReturnPress()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodonSelect">P4A_Widget::onSelect()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodredesign">P4A_Widget::redesign()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodremoveCSSClass">P4A_Widget::removeCSSClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodrequireConfirmation">P4A_Widget::requireConfirmation()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetAccessKey">P4A_Widget::setAccessKey()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetBgcolor">P4A_Widget::setBgcolor()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetBgimage">P4A_Widget::setBgimage()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetDefaultLabel">P4A_Widget::setDefaultLabel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetFontColor">P4A_Widget::setFontColor()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetFontWeight">P4A_Widget::setFontWeight()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetHeight">P4A_Widget::setHeight()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetInvisible">P4A_Widget::setInvisible()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetLabel">P4A_Widget::setLabel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetProperty">P4A_Widget::setProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetStyleProperty">P4A_Widget::setStyleProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetTooltip">P4A_Widget::setTooltip()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetVisible">P4A_Widget::setVisible()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodsetWidth">P4A_Widget::setWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodunrequireConfirmation">P4A_Widget::unrequireConfirmation()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodunsetProperty">P4A_Widget::unsetProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methodunsetStyleProperty">P4A_Widget::unsetStyleProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Widget.html#methoduseTemplate">P4A_Widget::useTemplate()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../p4a/P4A_Object.html">P4A_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method__construct">P4A_Object::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodbuild">P4A_Object::build()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoddestroy">P4A_Object::destroy()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoddropImplement">P4A_Object::dropImplement()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoderrorHandler">P4A_Object::errorHandler()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetId">P4A_Object::getId()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetName">P4A_Object::getName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetObjectType">P4A_Object::getObjectType()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetParentID">P4A_Object::getParentID()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodimplement">P4A_Object::implement()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodintercept">P4A_Object::intercept()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodisActionTriggered">P4A_Object::isActionTriggered()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodsetName">P4A_Object::setName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodsetParentID">P4A_Object::setParentID()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodvoid">P4A_Object::void()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method_loadHelper">P4A_Object::_loadHelper()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method__call">P4A_Object::__call()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 10 Aug 2011 22:27:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

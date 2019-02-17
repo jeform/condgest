@@ -1,0 +1,3333 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class P4A_Widget</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> P4A_Widget</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Base class for objects that permit user interation with the application.</p>
+<p class="description"><p>Every P4A objects thats can be rendered should use WIDGET as base class.  This class have all the basic methods to build complex widgets that must  be P4A compatible.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Andrea Giardina &lt;<a href="mailto:andrea.giardina@crealabs.it">andrea.giardina@crealabs.it</a>&gt;</li>
+				<li><span class="field">author:</span> Fabrizio Balliano &lt;<a href="mailto:fabrizio@fabrizioballiano.it">fabrizio@fabrizioballiano.it</a>&gt;</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2003-2010 Fabrizio Balliano, Andrea Giardina</li>
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_p4a---objects---widget.php.html">/p4a/objects/widget.php</a> (line <span class="field">40</span>)
+		</p>
+		
+				
+		<pre><a href="../p4a/P4A_Object.html">P4A_Object</a>
+   |
+   --P4A_Widget</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_DB_Navigator.html">P4A_DB_Navigator</a>
+					</td>
+					<td>
+											This widget allows a tree navigation within a P4A_DB_Source.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Label.html">P4A_Label</a>
+					</td>
+					<td>
+											The label is associated to an input field, do not use it otherwise
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Frame.html">P4A_Frame</a>
+					</td>
+					<td>
+											A frame is a panel where you anchor widgets.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Button.html">P4A_Button</a>
+					</td>
+					<td>
+											HTML &quot;button&quot;.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Message.html">P4A_Message</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Sheet.html">P4A_Sheet</a>
+					</td>
+					<td>
+											The sheet widget  A canvas is a panel where you anchor widgets in a grid way.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Link.html">P4A_Link</a>
+					</td>
+					<td>
+											&quot;A&quot; HTML tag
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Toolbar.html">P4A_Toolbar</a>
+					</td>
+					<td>
+											A toolbar is a buttons/images set.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Table.html">P4A_Table</a>
+					</td>
+					<td>
+											Tabular rapresentation of a data source.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Table_Col.html">P4A_Table_Col</a>
+					</td>
+					<td>
+											Keeps the data for a single table column
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Table_Rows.html">P4A_Table_Rows</a>
+					</td>
+					<td>
+											Keeps all the data for all the rows.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Image.html">P4A_Image</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Canvas.html">P4A_Canvas</a>
+					</td>
+					<td>
+											A canvas is a panel where you anchor widgets with absolute positions
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Box.html">P4A_Box</a>
+					</td>
+					<td>
+											The box: renders raw HTML
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Line.html">P4A_Line</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Dir_Navigator.html">P4A_Dir_Navigator</a>
+					</td>
+					<td>
+											This widget allows a tree navigation within a directory.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Progress_Bar.html">P4A_Progress_Bar</a>
+					</td>
+					<td>
+											A progress bar widget for P4A.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Tab_Pane.html">P4A_Tab_Pane</a>
+					</td>
+					<td>
+											The tab pane widget  A tab pane is a set of pages.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Field.html">P4A_Field</a>
+					</td>
+					<td>
+											A fields is a GUI element that shows its value, and this value can be changed.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Menu.html">P4A_Menu</a>
+					</td>
+					<td>
+											p4a menu system  As in every big IDE such as Sun ONE or Microsoft Visual Studio  you have the possibility to add the top menu for simple  organization of masks.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../p4a/P4A_Menu_Item.html">P4A_Menu_Item</a>
+					</td>
+					<td>
+											Rapresents every menu item
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$actions" title="details" class="var-name">$actions</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$enabled" title="details" class="var-name">$enabled</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../p4a/P4A_Label.html">P4A_Label</a></span>
+					<a href="#$label" title="details" class="var-name">$label</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$properties" title="details" class="var-name">$properties</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$style" title="details" class="var-name">$style</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$template_name" title="details" class="var-name">$template_name</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$use_template" title="details" class="var-name">$use_template</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$visible" title="details" class="var-name">$visible</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_css_classes" title="details" class="var-name">$_css_classes</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_temp_vars" title="details" class="var-name">$_temp_vars</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_tooltip" title="details" class="var-name">$_tooltip</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_tpl_vars" title="details" class="var-name">$_tpl_vars</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">P4A_Widget</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'obj'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#addAction" title="details" class="method-name">addAction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span> = <span class="var-default">null</span>], [<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$confirmation_text</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#addAjaxAction" title="details" class="method-name">addAjaxAction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span> = <span class="var-default">null</span>], [<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$confirmation_text</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#addCSSClass" title="details" class="method-name">addCSSClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#addTempVar" title="details" class="method-name">addTempVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#changeEvent" title="details" class="method-name">changeEvent</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#clearTemplateVars" title="details" class="method-name">clearTemplateVars</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#clearTempVars" title="details" class="method-name">clearTempVars</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#composeStringActions" title="details" class="method-name">composeStringActions</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$check_enabled_state</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#composeStringClass" title="details" class="method-name">composeStringClass</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$additional_classes</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#composeStringProperties" title="details" class="method-name">composeStringProperties</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#composeStringStyle" title="details" class="method-name">composeStringStyle</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#disable" title="details" class="method-name">disable</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#display" title="details" class="method-name">display</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$var_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$var_value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#dropAction" title="details" class="method-name">dropAction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#dropTempVar" title="details" class="method-name">dropTempVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#enable" title="details" class="method-name">enable</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#fetchTemplate" title="details" class="method-name">fetchTemplate</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAccessKey" title="details" class="method-name">getAccessKey</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getAsString" title="details" class="method-name">getAsString</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getCSSClasses" title="details" class="method-name">getCSSClasses</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getHeight" title="details" class="method-name">getHeight</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLabel" title="details" class="method-name">getLabel</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getProperty" title="details" class="method-name">getProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getStyleProperty" title="details" class="method-name">getStyleProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTooltip" title="details" class="method-name">getTooltip</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getWidth" title="details" class="method-name">getWidth</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#isEnabled" title="details" class="method-name">isEnabled</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isVisible" title="details" class="method-name">isVisible</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onBlur" title="details" class="method-name">onBlur</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onChange" title="details" class="method-name">onChange</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onClick" title="details" class="method-name">onClick</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onDblClick" title="details" class="method-name">onDblClick</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onFocus" title="details" class="method-name">onFocus</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onKeyDown" title="details" class="method-name">onKeyDown</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onKeyPress" title="details" class="method-name">onKeyPress</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onKeyUp" title="details" class="method-name">onKeyUp</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onMouseDown" title="details" class="method-name">onMouseDown</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onMouseMove" title="details" class="method-name">onMouseMove</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onMouseOver" title="details" class="method-name">onMouseOver</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onMouseUp" title="details" class="method-name">onMouseUp</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onReturnPress" title="details" class="method-name">onReturnPress</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">unknown</span>
+										<a href="#onSelect" title="details" class="method-name">onSelect</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#redesign" title="details" class="method-name">redesign</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#removeCSSClass" title="details" class="method-name">removeCSSClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#requireConfirmation" title="details" class="method-name">requireConfirmation</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">'onclick'</span>], [<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$confirmation_text</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setAccessKey" title="details" class="method-name">setAccessKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setBgcolor" title="details" class="method-name">setBgcolor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setBgimage" title="details" class="method-name">setBgimage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setDefaultLabel" title="details" class="method-name">setDefaultLabel</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setFontColor" title="details" class="method-name">setFontColor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setFontWeight" title="details" class="method-name">setFontWeight</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setHeight" title="details" class="method-name">setHeight</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$unit</span> = <span class="var-default">'px'</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setInvisible" title="details" class="method-name">setInvisible</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setLabel" title="details" class="method-name">setLabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setProperty" title="details" class="method-name">setProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setStyleProperty" title="details" class="method-name">setStyleProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Label.html">P4A_Label</a></span>
+										<a href="#setTooltip" title="details" class="method-name">setTooltip</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setVisible" title="details" class="method-name">setVisible</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$visible</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#setWidth" title="details" class="method-name">setWidth</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$unit</span> = <span class="var-default">'px'</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#unrequireConfirmation" title="details" class="method-name">unrequireConfirmation</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#unsetProperty" title="details" class="method-name">unsetProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#unsetStyleProperty" title="details" class="method-name">unsetStyleProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+										<a href="#useTemplate" title="details" class="method-name">useTemplate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$template_name</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$actions" id="$actions"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$actions</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Keeps all the actions implemented by the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$enabled" id="$enabled"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$enabled</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">46</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object's enabled status. If the widget is visible but not enable it won't be clickable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$label" id="$label"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../p4a/P4A_Label.html">P4A_Label</a></span>
+			<span class="var-name">$label</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Keeps the label associated with the widget</p>
+<p class="description"><p>The label will be displayed on the left of the widget</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$properties" id="$properties"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$properties</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Keeps all the HTML properties for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$style" id="$style"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$style</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">76</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Keeps all the CSS properties for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$template_name" id="$template_name"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$template_name</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">90</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Defines the name of the widget  if you set it to 'menu' P4A will search for &quot;menu/menu.tpl&quot;  in the &quot;themes/CURRENT_THEME/widgets/&quot; directory.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$use_template" id="$use_template"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$use_template</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">82</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Defines if we are going to use a template for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$visible" id="$visible"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$visible</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_css_classes" id="$_css_classes"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_css_classes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">107</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_temp_vars" id="$_temp_vars"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_temp_vars</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">102</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Temporary variables (destroyed after rendering)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tooltip" id="$_tooltip"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_tooltip</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">112</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tpl_vars" id="$_tpl_vars"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_tpl_vars</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">96</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">variables used for templates</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../p4a/P4A_Object.html">P4A_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_helpers">P4A_Object::$_helpers</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_id">P4A_Object::$_id</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_map_actions">P4A_Object::$_map_actions</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_name">P4A_Object::$_name</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_objects">P4A_Object::$_objects</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../p4a/P4A_Object.html#var$_parent_id">P4A_Object::$_parent_id</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">119</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">P4A_Widget</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'obj'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Object identifier, when you add an object to another object (such as $p4a) you can access to it by $p4a-&gt;object_name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Prefix string for ID generation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: Object ID identifies an object in the $p4a's object collection. You can set a static ID if you want that all clients uses the same ID (tipically for web sites).</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../p4a/P4A_Object.html#method__construct">P4A_Object::__construct()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_DB_Navigator.html#method__construct">P4A_DB_Navigator::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Label.html#method__construct">P4A_Label::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table_Navigation_Bar.html#method__construct">P4A_Table_Navigation_Bar::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Button.html#method__construct">P4A_Button::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Sheet.html#method__construct">P4A_Sheet::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Link.html#method__construct">P4A_Link::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Toolbar.html#method__construct">P4A_Toolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Full_Toolbar.html#method__construct">P4A_Full_Toolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Simple_Toolbar.html#method__construct">P4A_Simple_Toolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Actions_Toolbar.html#method__construct">P4A_Actions_Toolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Navigation_Toolbar.html#method__construct">P4A_Navigation_Toolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Quit_Toolbar.html#method__construct">P4A_Quit_Toolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table.html#method__construct">P4A_Table::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Grid.html#method__construct">P4A_Grid::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table_Col.html#method__construct">P4A_Table_Col::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table_Rows.html#method__construct">P4A_Table_Rows::__construct()</a>
+								: Class constructor.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Line.html#method__construct">P4A_Line::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Dir_Navigator.html#method__construct">P4A_Dir_Navigator::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Tab_Pane.html#method__construct">P4A_Tab_Pane::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Field.html#method__construct">P4A_Field::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Menu.html#method__construct">P4A_Menu::__construct()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Menu_Item.html#method__construct">P4A_Menu_Item::__construct()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodaddAction" id="addAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addAction</span> (line <span class="line-number">428</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds an action to the implemented actions stack for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			addAction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span> = <span class="var-default">null</span>], [<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$confirmation_text</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$event</span><span class="var-description">: The JavaScript event that triggers</span>			</li>
+					<li>
+				<span class="var-type">string|boolean</span>
+				<span class="var-name">$confirmation_text</span><span class="var-description">: If the action requires user confirmation, type here the confirmation message (use boolean true for a general message)</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$ajax</span><span class="var-description">: is an ajax action?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddAjaxAction" id="addAjaxAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addAjaxAction</span> (line <span class="line-number">458</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds an ajax action to the implemented actions stack for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			addAjaxAction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span> = <span class="var-default">null</span>], [<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$confirmation_text</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$event</span><span class="var-description">: The JavaScript event that triggers</span>			</li>
+					<li>
+				<span class="var-type">string|boolean</span>
+				<span class="var-name">$confirmation_text</span><span class="var-description">: If the action requires user confirmation, type here the confirmation message (use boolean true for a general message)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddCSSClass" id="addCSSClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addCSSClass</span> (line <span class="line-number">921</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			addCSSClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddTempVar" id="addTempVar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addTempVar</span> (line <span class="line-number">888</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a temporary variable</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			addTempVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodchangeEvent" id="changeEvent"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">changeEvent</span> (line <span class="line-number">502</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Changes the event associated to an action.</p>
+<p class="description"><p>If no event is given, here we set event=action.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			changeEvent
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$event</span><span class="var-description">: The JavaScript event that triggers</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclearTemplateVars" id="clearTemplateVars"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clearTemplateVars</span> (line <span class="line-number">686</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Empties the template engine variables' stack</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			clearTemplateVars
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearTempVars" id="clearTempVars"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clearTempVars</span> (line <span class="line-number">911</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clear temporary vars list</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			clearTempVars
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcomposeStringActions" id="composeStringActions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">composeStringActions</span> (line <span class="line-number">553</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Composes a string containing all the actions implemented by the widget.</p>
+<p class="description"><p>Note: it will also contain the name and the value.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			composeStringActions
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$check_enabled_state</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$check_enabled_state</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcomposeStringClass" id="composeStringClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">composeStringClass</span> (line <span class="line-number">634</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Composes a string contaning the class property for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			composeStringClass
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$additional_classes</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$additional_classes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcomposeStringProperties" id="composeStringProperties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">composeStringProperties</span> (line <span class="line-number">535</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Composes a string containing all the HTML properties of the widget.</p>
+<p class="description"><p>Note: it will also contain the name and the value.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			composeStringProperties
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Field.html#methodcomposeStringProperties">P4A_Field::composeStringProperties()</a>
+								: Composes a string containing all the HTML properties of the widget.
+							</li>
+				</ul>
+	</div>
+<a name="methodcomposeStringStyle" id="composeStringStyle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">composeStringStyle</span> (line <span class="line-number">616</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Composes a string containing the CSS properties for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			composeStringStyle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisable" id="disable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">disable</span> (line <span class="line-number">140</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#var$enabled">P4A_Widget::$enabled</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			disable
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Toolbar.html#methoddisable">P4A_Toolbar::disable()</a>
+								: Disables all buttons
+							</li>
+				</ul>
+	</div>
+<a name="methoddisplay" id="display"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">display</span> (line <span class="line-number">665</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds this variable (name and value) to the template engine variables' stack.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			display
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$var_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$var_value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$var_name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$var_value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddropAction" id="dropAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">dropAction</span> (line <span class="line-number">523</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removes an action from the implemented actions stack for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			dropAction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddropTempVar" id="dropTempVar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">dropTempVar</span> (line <span class="line-number">899</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Drop a temporary variable</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			dropTempVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodenable" id="enable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">enable</span> (line <span class="line-number">130</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#var$enabled">P4A_Widget::$enabled</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			enable
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$enabled</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Toolbar.html#methodenable">P4A_Toolbar::enable()</a>
+								: Enable/disable all buttons
+							</li>
+				</ul>
+	</div>
+<a name="methodfetchTemplate" id="fetchTemplate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">fetchTemplate</span> (line <span class="line-number">696</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the HTML rendered template</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			fetchTemplate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAccessKey" id="getAccessKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAccessKey</span> (line <span class="line-number">305</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAccessKey
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAsString" id="getAsString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAsString</span> (line <span class="line-number">736</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the HTML rendered widget.</p>
+<p class="description"><p>This method MUST be overridden by every  widget that extends P4A_this class.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getAsString
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_DB_Navigator.html#methodgetAsString">P4A_DB_Navigator::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Label.html#methodgetAsString">P4A_Label::getAsString()</a>
+								: Returns the HTML rendered label.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Frame.html#methodgetAsString">P4A_Frame::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Fieldset.html#methodgetAsString">P4A_Fieldset::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table_Navigation_Bar.html#methodgetAsString">P4A_Table_Navigation_Bar::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Button.html#methodgetAsString">P4A_Button::getAsString()</a>
+								: Retuns the HTML rendered button
+							</li>
+					<li>
+				<a href="../p4a/P4A_Message.html#methodgetAsString">P4A_Message::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Sheet.html#methodgetAsString">P4A_Sheet::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Link.html#methodgetAsString">P4A_Link::getAsString()</a>
+								: HTML rendered link
+							</li>
+					<li>
+				<a href="../p4a/P4A_Toolbar.html#methodgetAsString">P4A_Toolbar::getAsString()</a>
+								: Returns the HTML rendered widget
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table.html#methodgetAsString">P4A_Table::getAsString()</a>
+								: Returns the HTML rendered object
+							</li>
+					<li>
+				<a href="../p4a/P4A_Image.html#methodgetAsString">P4A_Image::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Canvas.html#methodgetAsString">P4A_Canvas::getAsString()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Box.html#methodgetAsString">P4A_Box::getAsString()</a>
+								: Retuns the HTML rendered button.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Line.html#methodgetAsString">P4A_Line::getAsString()</a>
+								: HTML rendered link
+							</li>
+					<li>
+				<a href="../p4a/P4A_Dir_Navigator.html#methodgetAsString">P4A_Dir_Navigator::getAsString()</a>
+								: Renders the widget as HTML.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Progress_Bar.html#methodgetAsString">P4A_Progress_Bar::getAsString()</a>
+								: Retuns the HTML rendered progress bar.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Tab_Pane.html#methodgetAsString">P4A_Tab_Pane::getAsString()</a>
+								: Returns the rendered HTML
+							</li>
+					<li>
+				<a href="../p4a/P4A_Field.html#methodgetAsString">P4A_Field::getAsString()</a>
+								: Returns the HTML rendered field.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Menu.html#methodgetAsString">P4A_Menu::getAsString()</a>
+								: Returns the HTML rendered widget
+							</li>
+					<li>
+				<a href="../p4a/P4A_Menu_Item.html#methodgetAsString">P4A_Menu_Item::getAsString()</a>
+								: Renders HTML
+							</li>
+				</ul>
+	</div>
+<a name="methodgetCSSClasses" id="getCSSClasses"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCSSClasses</span> (line <span class="line-number">943</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getCSSClasses
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHeight" id="getHeight"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHeight</span> (line <span class="line-number">363</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the height for the widget.</p>
+<p class="description"><p>It's a wrapper for getStyleProperty().</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodgetStyleProperty">P4A_Widget::getStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getHeight
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLabel" id="getLabel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getLabel</span> (line <span class="line-number">215</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the label for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLabel
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Field.html#methodgetLabel">P4A_Field::getLabel()</a>
+								: Returns the label for the field
+							</li>
+				</ul>
+	</div>
+<a name="methodgetProperty" id="getProperty"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getProperty</span> (line <span class="line-number">248</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the value of a property</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStyleProperty" id="getStyleProperty"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getStyleProperty</span> (line <span class="line-number">285</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the value of a CSS property</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getStyleProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTooltip" id="getTooltip"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTooltip</span> (line <span class="line-number">961</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTooltip
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Field.html#methodgetTooltip">P4A_Field::getTooltip()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodgetWidth" id="getWidth"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getWidth</span> (line <span class="line-number">334</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the width for the widget.</p>
+<p class="description"><p>It's a wrapper for getStyleProperty().</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodgetStyleProperty">P4A_Widget::getStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getWidth
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisEnabled" id="isEnabled"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isEnabled</span> (line <span class="line-number">150</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if the widget is enabled</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> $enable</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isEnabled
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisVisible" id="isVisible"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isVisible</span> (line <span class="line-number">179</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if the widget is visible</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isVisible
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodonBlur" id="onBlur"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBlur</span> (line <span class="line-number">745</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onBlur action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onBlur
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonChange" id="onChange"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onChange</span> (line <span class="line-number">765</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onChange action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onChange
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonClick" id="onClick"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onClick</span> (line <span class="line-number">755</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onClick action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onClick
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_DB_Navigator.html#methodonClick">P4A_DB_Navigator::onClick()</a>
+								: OnClick event interceptor
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table_Col.html#methodonClick">P4A_Table_Col::onClick()</a>
+							</li>
+					<li>
+				<a href="../p4a/P4A_Table_Rows.html#methodonClick">P4A_Table_Rows::onClick()</a>
+								: onClick action handler for the row.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Dir_Navigator.html#methodonClick">P4A_Dir_Navigator::onClick()</a>
+								: OnClick event interceptor
+							</li>
+					<li>
+				<a href="../p4a/P4A_Menu_Item.html#methodonClick">P4A_Menu_Item::onClick()</a>
+								: What is executed on a click on the element.
+							</li>
+				</ul>
+	</div>
+<a name="methodonDblClick" id="onDblClick"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onDblClick</span> (line <span class="line-number">775</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onDblClick action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onDblClick
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonFocus" id="onFocus"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onFocus</span> (line <span class="line-number">785</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onFocus action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onFocus
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonKeyDown" id="onKeyDown"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onKeyDown</span> (line <span class="line-number">855</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onKeyDown action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onKeyDown
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonKeyPress" id="onKeyPress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onKeyPress</span> (line <span class="line-number">835</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onKeyPress action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onKeyPress
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonKeyUp" id="onKeyUp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onKeyUp</span> (line <span class="line-number">845</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onKeyUp action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onKeyUp
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonMouseDown" id="onMouseDown"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onMouseDown</span> (line <span class="line-number">795</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onMouseDown action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onMouseDown
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonMouseMove" id="onMouseMove"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onMouseMove</span> (line <span class="line-number">805</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onMouseMove action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onMouseMove
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonMouseOver" id="onMouseOver"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onMouseOver</span> (line <span class="line-number">815</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onMouseOver action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onMouseOver
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonMouseUp" id="onMouseUp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onMouseUp</span> (line <span class="line-number">825</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onMouseUp action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onMouseUp
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonReturnPress" id="onReturnPress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onReturnPress</span> (line <span class="line-number">867</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onReturnPress action.</p>
+<p class="description"><p>The onReturnPress action is an onKeyPress with checking if  the pressed key is return.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onReturnPress
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonSelect" id="onSelect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onSelect</span> (line <span class="line-number">877</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper used to add the handling of onSelect action</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown</span>
+		<span class="method-name">
+			onSelect
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodredesign" id="redesign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">redesign</span> (line <span class="line-number">969</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			redesign
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodremoveCSSClass" id="removeCSSClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">removeCSSClass</span> (line <span class="line-number">931</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			removeCSSClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrequireConfirmation" id="requireConfirmation"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">requireConfirmation</span> (line <span class="line-number">469</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Requires confirmation for an action</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			requireConfirmation
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">'onclick'</span>], [<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$confirmation_text</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span>			</li>
+					<li>
+				<span class="var-type">string|boolean</span>
+				<span class="var-name">$confirmation_text</span><span class="var-description">: The confirmation message (default is boolean true for a general message)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAccessKey" id="setAccessKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setAccessKey</span> (line <span class="line-number">297</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setAccessKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBgcolor" id="setBgcolor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBgcolor</span> (line <span class="line-number">375</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the background color for the widget.</p>
+<p class="description"><p>It's a wrapper for setStyleProperty().</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodsetStyleProperty">P4A_Widget::setStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setBgcolor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to be used as color</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBgimage" id="setBgimage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBgimage</span> (line <span class="line-number">388</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the background image for the widget.</p>
+<p class="description"><p>It's a wrapper for setStyleProperty().</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodsetStyleProperty">P4A_Widget::setStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setBgimage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: The url of the image</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDefaultLabel" id="setDefaultLabel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setDefaultLabel</span> (line <span class="line-number">205</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create from name a default label for the widget  In rendering phase it will be added with ':  '.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#var$label">P4A_Widget::$label</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setDefaultLabel
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetFontColor" id="setFontColor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setFontColor</span> (line <span class="line-number">414</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the font color for the widget  It's a wrapper for setStyleProperty().</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodsetStyleProperty">P4A_Widget::setStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setFontColor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: The url of the image</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFontWeight" id="setFontWeight"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setFontWeight</span> (line <span class="line-number">401</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the font weight for the widget.</p>
+<p class="description"><p>It's a wrapper for setStyleProperty().</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodsetStyleProperty">P4A_Widget::setStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setFontWeight
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: The url of the image</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHeight" id="setHeight"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setHeight</span> (line <span class="line-number">347</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the height for the widget.</p>
+<p class="description"><p>It's a wrapper for setStyleProperty().</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodsetStyleProperty">P4A_Widget::setStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setHeight
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$unit</span> = <span class="var-default">'px'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to be used as height.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$unit</span><span class="var-description">: The measure unit (px|pt|%) etc...</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetInvisible" id="setInvisible"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setInvisible</span> (line <span class="line-number">169</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the widget invisible</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setInvisible
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetLabel" id="setLabel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setLabel</span> (line <span class="line-number">191</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the label for the widget.</p>
+<p class="description"><p>In rendering phase it will be added with ':  '.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#var$label">P4A_Widget::$label</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setLabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Button.html#methodsetLabel">P4A_Button::setLabel()</a>
+								: Sets the label and its visibility  When a label is visible it will be rendered next to the icon (if there's an icon),  otherwise you'll see the lable as a tooltip.
+							</li>
+					<li>
+				<a href="../p4a/P4A_Field.html#methodsetLabel">P4A_Field::setLabel()</a>
+								: Sets the label for the field.
+							</li>
+				</ul>
+	</div>
+<a name="methodsetProperty" id="setProperty"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setProperty</span> (line <span class="line-number">226</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets an HTML property for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetStyleProperty" id="setStyleProperty"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setStyleProperty</span> (line <span class="line-number">263</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets a CSS property for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setStyleProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTooltip" id="setTooltip"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setTooltip</span> (line <span class="line-number">952</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Label.html">P4A_Label</a></span>
+		<span class="method-name">
+			setTooltip
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Field.html#methodsetTooltip">P4A_Field::setTooltip()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodsetVisible" id="setVisible"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setVisible</span> (line <span class="line-number">159</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setVisible
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$visible</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$visible</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../p4a/P4A_Table_Col.html#methodsetVisible">P4A_Table_Col::setVisible()</a>
+								: Sets the column visible (and add it as the last in the coloumn display order)
+							</li>
+				</ul>
+	</div>
+<a name="methodsetWidth" id="setWidth"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setWidth</span> (line <span class="line-number">317</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the width for the widget.</p>
+<p class="description"><p>It's a wrapper for setStyleProperty().</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../p4a/P4A_Widget.html#methodsetStyleProperty">P4A_Widget::setStyleProperty()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			setWidth
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$unit</span> = <span class="var-default">'px'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to be used as width</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$unit</span><span class="var-description">: The measure unit (px|pt|%) etc...</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunrequireConfirmation" id="unrequireConfirmation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">unrequireConfirmation</span> (line <span class="line-number">487</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removes confirmation for an action</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			unrequireConfirmation
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunsetProperty" id="unsetProperty"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">unsetProperty</span> (line <span class="line-number">237</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unsets an HTML property for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			unsetProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunsetStyleProperty" id="unsetStyleProperty"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">unsetStyleProperty</span> (line <span class="line-number">274</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unset a CSS property for the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			unsetStyleProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseTemplate" id="useTemplate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">useTemplate</span> (line <span class="line-number">647</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Defines the template used by the widget</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../p4a/P4A_Widget.html">P4A_Widget</a></span>
+		<span class="method-name">
+			useTemplate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$template_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$template_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../p4a/P4A_Object.html">P4A_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method__construct">P4A_Object::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodactionHandler">P4A_Object::actionHandler()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodbuild">P4A_Object::build()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoddestroy">P4A_Object::destroy()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoddropImplement">P4A_Object::dropImplement()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methoderrorHandler">P4A_Object::errorHandler()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetId">P4A_Object::getId()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetName">P4A_Object::getName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetObjectType">P4A_Object::getObjectType()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodgetParentID">P4A_Object::getParentID()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodimplement">P4A_Object::implement()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodintercept">P4A_Object::intercept()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodisActionTriggered">P4A_Object::isActionTriggered()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodsetName">P4A_Object::setName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodsetParentID">P4A_Object::setParentID()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#methodvoid">P4A_Object::void()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method_loadHelper">P4A_Object::_loadHelper()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../p4a/P4A_Object.html#method__call">P4A_Object::__call()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 10 Aug 2011 22:27:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,126 @@
+---------------------------------
+-- P4A - PHP For Applications. --
+---------------------------------
+
+------------------
+-- Installation --
+------------------
+
+Just extract the archive under your web server
+DOCUMENT_ROOT (eg: /var/www).
+
+You should rename the directory
+"p4a-version" to "p4a".
+
+If you want to test drive a sample application built on P4A
+open your browser and type:
+
+	http://localhost/p4a/applications/products_catalogue
+
+products_catalogue is an example of a virtual catalogue
+for shops. To have this application runnning take a look at
+applications/products_catalogue/README
+
+--------------------------
+- ADVANCED INSTALLATION --
+--------------------------
+
+If you want to have p4a installed out of your document root, this will help
+you. We use the debian standard way, extract the framework and put it in
+
+/usr/share/p4a
+
+edit your Apache's httpd.conf and add this lines:
+
+Alias /p4a /usr/share/p4a
+<Directory /usr/share/p4a>
+ Order allow,deny
+ Allow from all
+</Directory>
+
+-------------------
+-- Documentation --
+-------------------
+
+You'll find P4A code reference under the "docs" folder.
+
+All other documentation is available within P4A website:
+http://p4a.sourceforge.net
+
+------------------------------------
+-- P4A compatibility: Server Side --
+------------------------------------
+
+Linux/Windows
+Apache >= 1.3.0
+IIS >= 6.0
+php/mod_php >= 5.2.0
+
+------------------------------------
+-- P4A compatibility: Client Side --
+------------------------------------
+
+P4A works with all browsers that supports XHTML
+and JavaScript.
+
+The default theme instead uses CSS2 and some
+more complex Javascript, so here you have the
+tested browsers:
+
+- Mozilla Firefox 2.x
+- Internet Explorer 6.x, 7.x
+- Safari 3.x
+- Opera 9.25+ (has issues with P4A_DB_Navigator drag&drop)
+- Google Chrome
+
+-----------------------------------------
+-- P4A compatibility: Database engines --
+-----------------------------------------
+
+P4A works with:
+- MySQL
+- PostgreSQL
+- Oracle
+- SQLite
+- Microsoft SQL Server
+
+To make P4A connect to a database you need PDO extensions
+(pdo_mysql, pdo_pgsql, pdo_oci, pdo_sqlite, pdo_mssql).
+
+All connections' charsets are set to UTF-8.
+
+If you're using Microsoft SQL Server beware that only nchar and nvarchar
+data type is unicode, thus do not use char and varchar because they're
+not UTF-8 safe. 
+
+------------------
+-- KNOWN ISSUES --
+------------------
+
+You can't switch between two application with the same
+P4A_APPLICATION_NAME under the same virtual host
+without closing the browser.
+
+P4A can't handle database tables with numeric column names.
+
+If you want to add calculated fields coming from a DB query
+(such as DISTICT(example_field)) always use parenthesis and never
+use the "DISTINCT example_field" syntax.
+
+When creating a complex P4A_DB_Source, do not set an alias on the
+primary key.
+
+Oracle's "date" data field is not supported, you should use a char(10).
+Within your application simply add:
+	$p4a_field->setType("date");
+	$p4a_field->data_field->setType("date");
+	
+If you set P4A_Table's width to 100% and anchor it in a frame/fieldset
+this won't work cause all frame's cells are floating.
+
+-------------
+-- Authors --
+-------------
+
+Fabrizio Balliano <fabrizio@fabrizioballiano.it>
+Andrea Giardina <andrea.giardina@crealabs.it>
