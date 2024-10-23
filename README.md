@@ -27,4 +27,4 @@ Faça o push para a branch (git push origin feature/nova-feature).
 Abra um Pull Request.
 
 ## Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a Licença Apache-2.0 - veja o arquivo LICENSE para mais detalhes.
